@@ -16,7 +16,7 @@ namespace Domen
         public DateTime DatumRodjenja { get; set; }
         public string Adresa { get; set; }
 
-        public string TableName => throw new NotImplementedException();
+        public string TableName => "Korisnik";
 
         public string TableAlias => throw new NotImplementedException();
 
@@ -31,6 +31,8 @@ namespace Domen
         public string WhereCondition => throw new NotImplementedException();
 
         public string InsertValues => throw new NotImplementedException();
+
+        public string GeneralCondition => throw new NotImplementedException();
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

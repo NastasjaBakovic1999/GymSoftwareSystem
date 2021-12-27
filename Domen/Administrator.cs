@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Domen
 {
-    public class Usluga : IEntity
+    public class Administrator : IEntity
     {
-        public int UslugaId { get; set; }
-        public string Naziv { get; set; }
-        public Trener Trener { get; set; }
-        public string TableName => "Usluga"
+        public string KorisnickoIme { get; set; }
+        public string Sifra { get; set; }
+        public bool Ulogovan { get; set; }
+        public string TableName =>  "Administrator";
 
         public string TableAlias => throw new NotImplementedException();
 
@@ -20,30 +20,27 @@ namespace Domen
 
         public string JoinCondition => throw new NotImplementedException();
 
+        public string WhereCondition => throw new NotImplementedException();
+
+        public string GeneralCondition => throw new NotImplementedException();
+
         public object SelectValues => throw new NotImplementedException();
 
         public string UpdateValues => throw new NotImplementedException();
-
-        public string WhereCondition => throw new NotImplementedException();
 
         public string InsertValues => throw new NotImplementedException();
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
             List<IEntity> result = new List<IEntity>();
-
             while (reader.Read())
             {
-                result.Add(new Usluga
+                result.Add(new Administrator
                 {
-                    UslugaId = (int)reader["UslugaId"],
-                    Naziv=(string)reader["Naziv"],
-                    Trener = new Trener
-                    {
-                        TrenerId = (int)reader["TrenerId"],
-                        Ime = (string)reader["Ime"],
-                        Prezime = (string)reader["Prezime"]
-                    }
+
+                    KorisnickoIme = (string)reader["KorisnickoIme"],
+                    Sifra = (string)reader["Sifra"],
+
                 });
             }
             return result;

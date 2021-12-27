@@ -11,7 +11,7 @@ namespace Domen
     {
         public Korisnik Korisnik { get; set; }
         public Termin Termin { get; set; }
-        public string TableName => throw new NotImplementedException();
+        public string TableName => "Rezervacija";
 
         public string TableAlias => throw new NotImplementedException();
 
@@ -26,6 +26,8 @@ namespace Domen
         public string UpdateValues => throw new NotImplementedException();
 
         public string InsertValues => throw new NotImplementedException();
+
+        public string GeneralCondition => throw new NotImplementedException();
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

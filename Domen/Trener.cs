@@ -12,7 +12,7 @@ namespace Domen
         public int TrenerId { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string TableName => throw new NotImplementedException();
+        public string TableName => "Trener";
 
         public string TableAlias => throw new NotImplementedException();
 

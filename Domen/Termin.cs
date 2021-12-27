@@ -14,7 +14,7 @@ namespace Domen
         public int Kapacitet { get; set; }
         public Usluga Usluga { get; set; }
         public Sala Sala { get; set; }
-        public string TableName => throw new NotImplementedException();
+        public string TableName => "Termin";
 
         public string TableAlias => throw new NotImplementedException();
 
