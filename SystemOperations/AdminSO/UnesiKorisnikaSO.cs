@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SystemOperations.AdminSO
 {
-    public class UnesiKorisnika:SystemOperationBase
+    public class UnesiKorisnikaSO : SystemOperationBase
     {
         protected override void ExecuteOperation(IEntity entity)
         {
-            repository.Save(entity);
+           repository.Save(entity);
         }
 
     }

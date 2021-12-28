@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SystemOperations
 {
-    internal class UcitajTermineSO : SystemOperationBase
+    public class UcitajTermineSO : SystemOperationBase
     {
         public List<Termin> Result { get; private set; }
         protected override void ExecuteOperation(IEntity entity)

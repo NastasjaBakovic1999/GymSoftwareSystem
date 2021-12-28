@@ -9,9 +9,10 @@ namespace SystemOperations.AdminSO
 {
     public class PretraziKorisnikeSO : SystemOperationBase
     {
+        public List<Korisnik> Result { get; set; }
         protected override void ExecuteOperation(IEntity entity)
         {
-            repository.GetAllWithCondition(entity).Cast<Korisnik>().ToList();
+            Result = repository.GetAllWithCondition(entity).Cast<Korisnik>().ToList();
         }
     }
 }

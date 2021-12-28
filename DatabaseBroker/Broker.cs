@@ -91,5 +91,15 @@ namespace DatabaseBroker
             return result;
         }
 
+        public List<IEntity> GetSpecific(IEntity entity)
+        {
+            List<IEntity> result;
+            SqlCommand command = new SqlCommand("", connection, transaction);
+            command.CommandText = $"select {entity.SelectValues} from {entity.TableName} {entity.TableAlias} {entity.JoinTable} {entity.JoinCondition} where {entity.GeneralCondition}";
+            SqlDataReader reader = command.ExecuteReader();
+            result = entity.GetEntities(reader);
+            reader.Close();
+            return result;
+        }
     }
 }

@@ -47,8 +47,8 @@
     <Compile Include="AdminSO\ObrisiTerminSO.cs" />
     <Compile Include="AdminSO\ObrisiUsluguSO.cs" />
     <Compile Include="AdminSO\PretraziKorisnikeSO.cs" />
-    <Compile Include="AdminSO\UcitajKorisnikaSO.cs" />
     <Compile Include="AdminSO\UnesiKorisnikaSO.cs" />
+    <Compile Include="UcitajKorisnikaSO.cs" />
     <Compile Include="AdminSO\UnesiRezervacijeSO.cs" />
     <Compile Include="AdminSO\UnesiTermineSO.cs" />
     <Compile Include="AdminSO\UnesiUsluguSO.cs" />

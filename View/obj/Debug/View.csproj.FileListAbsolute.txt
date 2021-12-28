@@ -1,0 +1,11 @@
+G:\Projekat\View\bin\Debug\View.exe.config
+G:\Projekat\View\bin\Debug\View.exe
+G:\Projekat\View\bin\Debug\View.pdb
+G:\Projekat\View\obj\Debug\View.csproj.AssemblyReference.cache
+G:\Projekat\View\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
+G:\Projekat\View\obj\Debug\View.FrmLogin.resources
+G:\Projekat\View\obj\Debug\View.Properties.Resources.resources
+G:\Projekat\View\obj\Debug\View.csproj.GenerateResource.cache
+G:\Projekat\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+G:\Projekat\View\obj\Debug\View.exe
+G:\Projekat\View\obj\Debug\View.pdb

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemOperations", "SystemO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerC", "ControllerC\ControllerC.csproj", "{BB5BAD7D-509F-47C9-8974-93331B99C0F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{0411E099-59E4-4F56-8742-01CA41A718CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BB5BAD7D-509F-47C9-8974-93331B99C0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5BAD7D-509F-47C9-8974-93331B99C0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5BAD7D-509F-47C9-8974-93331B99C0F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0411E099-59E4-4F56-8742-01CA41A718CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0411E099-59E4-4F56-8742-01CA41A718CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0411E099-59E4-4F56-8742-01CA41A718CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0411E099-59E4-4F56-8742-01CA41A718CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

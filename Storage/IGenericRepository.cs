@@ -13,6 +13,7 @@ namespace Storage
         void Update(IEntity entity);    
         List<IEntity> GetAll(IEntity entity);
         List<IEntity> GetAllWithCondition(IEntity entity);
+        List<IEntity> GetSpecific(IEntity entity);
         void Delete(IEntity entity);
         void OpenConnection();
         void CloseConnection();

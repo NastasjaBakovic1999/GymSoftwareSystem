@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SystemOperations.AdminSO
 {
-    internal class ObrisiKorisnikaSO : SystemOperationBase
+    public class ObrisiKorisnikaSO : SystemOperationBase
     {
         protected override void ExecuteOperation(IEntity entity)
         {

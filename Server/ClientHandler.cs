@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,13 @@ namespace Server
             catch (IOException)
             {
                 Console.WriteLine("Doslo je do prekida veze");
+                admini.Remove(ulogovaniAdmin);
+            }
+            catch (SerializationException)
+            {
+                Console.WriteLine("Doslo je do prekida veze");
+                admini.Remove(ulogovaniAdmin);
+
             }
         }
 
@@ -61,44 +69,63 @@ namespace Server
             switch (request.Operation)
             {
                 case Operation.ObrisiKorisnika:
+                    Controller.Instance.ObrisiKorisnika((Korisnik)request.RequestObject);
                     break;
                 case Operation.ObrisiRezervaciju:
+                    Controller.Instance.ObrisiRezervaciju((Rezervacija)request.RequestObject);
                     break;
                 case Operation.ObrisiTermin:
+                    Controller.Instance.ObrisiTermin((Termin)request.RequestObject);
                     break;
                 case Operation.ObrisiUslugu:
+                    Controller.Instance.ObrisiUslugu((Usluga)request.RequestObject);
                     break;
                 case Operation.PretraziKorisnike:
+                    response.Result = Controller.Instance.PretraziKorisnike((Korisnik)request.RequestObject);
                     break;
                 case Operation.UcitajKorisnika:
+                    Controller.Instance.UcitajKorisnika((Korisnik)request.RequestObject);
                     break;
                 case Operation.UnesiKorisnika:
+                    Controller.Instance.UnesiKorisnika((Korisnik)request.RequestObject);
                     break;
                 case Operation.UnesiRezervacije:
+                    Controller.Instance.UnesiRezervacije((List<Rezervacija>)request.RequestObject);
                     break;
                 case Operation.UnesiTermine:
+                    Controller.Instance.UnesiTermine((List<Termin>)request.RequestObject);
                     break;
                 case Operation.UnesiUslugu:
+                    Controller.Instance.UnesiUslugu((Usluga)request.RequestObject);
                     break;
                 case Operation.UcitajKorisnike:
+                    response.Result = Controller.Instance.UcitajKorisnike();
                     break;
                 case Operation.UcitajRezervacije:
+                    response.Result = Controller.Instance.UcitajRezervacije();
                     break;
                 case Operation.UcitajSale:
+                    response.Result = Controller.Instance.UcitajSale();
                     break;
                 case Operation.UcitajTermine:
+                    response.Result = Controller.Instance.UcitajTermine();
                     break;
                 case Operation.UcitajTrenere:
+                    response.Result = Controller.Instance.UcitajTrenere();
                     break;
                 case Operation.UcitajUsluge:
+                    response.Result = Controller.Instance.UcitajUsluge();
                     break;
                 case Operation.Login:
                     Administrator a = Controller.Instance.Login((Administrator)request.RequestObject);
                     if(a!= null)
                     {
-                        a.Ulogovan = admini.Any(adm => adm.KorisnickoIme == a.KorisnickoIme); // vaj dis vi du aj dont anderstend
-                        ulogovaniAdmin = a;
-                        admini.Add(ulogovaniAdmin);
+                        a.Ulogovan = admini.Any(adm => adm.KorisnickoIme == a.KorisnickoIme);
+                        if (!a.Ulogovan)
+                        {
+                            ulogovaniAdmin = a;
+                            admini.Add(ulogovaniAdmin);
+                        }
                     }
                     response.Result = a;
                     break;

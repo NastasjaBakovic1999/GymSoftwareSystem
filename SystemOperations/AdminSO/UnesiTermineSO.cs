@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace SystemOperations.AdminSO
 {
-    public class UnesiTerminSO : SystemOperationBase
+    public class UnesiTermineSO : SystemOperationBase
     {
+        public List<Termin> termini { get; set; }
         protected override void ExecuteOperation(IEntity entity)
         {
-            repository.Save(entity);
+            foreach(Termin t in termini)
+            {
+                repository.Save(t);
+            }
         }
     }
 }
