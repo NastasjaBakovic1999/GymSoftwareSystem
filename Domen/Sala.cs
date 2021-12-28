@@ -13,21 +13,20 @@ namespace Domen
         public string BrojSale { get; set; }
         public string TableName => "Sala";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "s";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "";
+        public string JoinCondition => "";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public object SelectValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string WhereCondition => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string InsertValues => "";
 
-        public string InsertValues => throw new NotImplementedException();
-
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

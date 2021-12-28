@@ -12,23 +12,24 @@ namespace Domen
         public int UslugaId { get; set; }
         public string Naziv { get; set; }
         public Trener Trener { get; set; }
+
         public string TableName => "Usluga";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "u";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "join Trener tren";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => "on u.TrenerId=tren.TrenerId";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => $"UslugaId={UslugaId}";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"'{Naziv}', {Trener.TrenerId}";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

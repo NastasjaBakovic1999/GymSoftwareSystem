@@ -11,23 +11,24 @@ namespace Domen
     {
         public Korisnik Korisnik { get; set; }
         public Termin Termin { get; set; }
+
         public string TableName => "Rezervacija";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "r";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "join Korisnik k";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => "on (r.KorisnikId=k.KorisnikId) join Termin t on (r.TerminId=t.TerminId)";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => $"KorisnikId = {Korisnik.KorisnikId} and TerminId = {Termin.TerminId}";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"{Korisnik.KorisnikId}, {Termin.TerminId}";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

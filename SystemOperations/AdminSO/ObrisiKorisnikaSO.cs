@@ -11,7 +11,7 @@ namespace SystemOperations.AdminSO
     {
         protected override void ExecuteOperation(IEntity entity)
         {
-            throw new NotImplementedException();
+            repository.Delete(entity);
         }
     }
 }

@@ -16,21 +16,21 @@ namespace Domen
         public Sala Sala { get; set; }
         public string TableName => "Termin";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "t";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "join Usluga u";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => $"on (t.UslugaId=u.UslugaId) join Sala s on (t.SalaId=s.SalaId)";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => $"TerminId={TerminId}";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"'{DatumVreme.ToString("yyyyMMdd")}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

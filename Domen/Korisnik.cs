@@ -18,21 +18,22 @@ namespace Domen
 
         public string TableName => "Korisnik";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "k";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => "";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => $"KorisnikId={KorisnikId}";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"'{JMBG}','{Ime}', '{Prezime}', '{DatumRodjenja.ToString("yyyyMMdd")}', '{Adresa}'";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string Uslov;
+        public string GeneralCondition => $"{Uslov}";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

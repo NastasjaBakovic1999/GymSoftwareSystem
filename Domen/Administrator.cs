@@ -14,21 +14,21 @@ namespace Domen
         public bool Ulogovan { get; set; }
         public string TableName =>  "Administrator";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "a";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => "";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
@@ -37,10 +37,8 @@ namespace Domen
             {
                 result.Add(new Administrator
                 {
-
                     KorisnickoIme = (string)reader["KorisnickoIme"],
                     Sifra = (string)reader["Sifra"],
-
                 });
             }
             return result;

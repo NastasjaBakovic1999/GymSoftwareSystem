@@ -39,9 +39,10 @@
             // txtStatus
             // 
             this.txtStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStatus.Location = new System.Drawing.Point(188, 351);
+            this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(144, 279);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(291, 23);
+            this.txtStatus.Size = new System.Drawing.Size(291, 26);
             this.txtStatus.TabIndex = 7;
             // 
             // label1
@@ -52,7 +53,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(296, 325);
+            this.label1.Location = new System.Drawing.Point(252, 253);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 6;
@@ -70,9 +71,9 @@
             this.btnPokreniServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPokreniServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPokreniServer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPokreniServer.Location = new System.Drawing.Point(97, 212);
+            this.btnPokreniServer.Location = new System.Drawing.Point(69, 187);
             this.btnPokreniServer.Name = "btnPokreniServer";
-            this.btnPokreniServer.Size = new System.Drawing.Size(209, 83);
+            this.btnPokreniServer.Size = new System.Drawing.Size(179, 62);
             this.btnPokreniServer.TabIndex = 4;
             this.btnPokreniServer.Text = "Pokreni server";
             this.btnPokreniServer.UseVisualStyleBackColor = false;
@@ -90,12 +91,13 @@
             this.btnZaustaviServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZaustaviServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZaustaviServer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZaustaviServer.Location = new System.Drawing.Point(370, 212);
+            this.btnZaustaviServer.Location = new System.Drawing.Point(342, 187);
             this.btnZaustaviServer.Name = "btnZaustaviServer";
-            this.btnZaustaviServer.Size = new System.Drawing.Size(209, 83);
+            this.btnZaustaviServer.Size = new System.Drawing.Size(179, 62);
             this.btnZaustaviServer.TabIndex = 8;
             this.btnZaustaviServer.Text = "Zaustavi server";
             this.btnZaustaviServer.UseVisualStyleBackColor = false;
+            this.btnZaustaviServer.Click += new System.EventHandler(this.btnZaustaviServer_Click);
             // 
             // FrmServer
             // 
@@ -103,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Server.Properties.Resources.gym;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(677, 451);
+            this.ClientSize = new System.Drawing.Size(571, 383);
             this.Controls.Add(this.btnZaustaviServer);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label1);

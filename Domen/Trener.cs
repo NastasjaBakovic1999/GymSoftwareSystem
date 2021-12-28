@@ -14,21 +14,21 @@ namespace Domen
         public string Prezime { get; set; }
         public string TableName => "Trener";
 
-        public string TableAlias => throw new NotImplementedException();
+        public string TableAlias => "tren";
 
-        public string JoinTable => throw new NotImplementedException();
+        public string JoinTable => "";
 
-        public string JoinCondition => throw new NotImplementedException();
+        public string JoinCondition => "";
 
-        public object SelectValues => throw new NotImplementedException();
+        public object SelectValues => "*";
 
-        public string UpdateValues => throw new NotImplementedException();
+        public string UpdateValues => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => "";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => "";
 
-        public string GeneralCondition => throw new NotImplementedException();
+        public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
