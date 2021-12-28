@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Server
 {
-    public partial class Form1 : Form
+    public partial class FrmServer : Form
     {
-        public Form1()
+        public FrmServer()
         {
             InitializeComponent();
+        }
+
+        private void btnPokreniServer_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

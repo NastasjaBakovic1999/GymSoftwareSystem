@@ -1,0 +1,11 @@
+G:\Projekat\Storage\bin\Debug\Storage.dll
+G:\Projekat\Storage\bin\Debug\Storage.pdb
+G:\Projekat\Storage\bin\Debug\DatabaseBroker.dll
+G:\Projekat\Storage\bin\Debug\Domen.dll
+G:\Projekat\Storage\bin\Debug\DatabaseBroker.pdb
+G:\Projekat\Storage\bin\Debug\Domen.pdb
+G:\Projekat\Storage\obj\Debug\Storage.csproj.AssemblyReference.cache
+G:\Projekat\Storage\obj\Debug\Storage.csproj.CoreCompileInputs.cache
+G:\Projekat\Storage\obj\Debug\Storage.csproj.CopyComplete
+G:\Projekat\Storage\obj\Debug\Storage.dll
+G:\Projekat\Storage\obj\Debug\Storage.pdb

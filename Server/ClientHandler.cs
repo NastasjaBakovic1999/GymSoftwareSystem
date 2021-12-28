@@ -1,4 +1,5 @@
 ﻿using Common;
+using ControllerC;
 using Domen;
 using System;
 using System.Collections.Generic;
@@ -18,9 +19,9 @@ namespace Server
         private readonly BindingList<Administrator> admini;
         private Administrator ulogovaniAdmin;
 
-        public ClientHandler(Socket client, System.ComponentModel.BindingList<Administrator> admini)
+        public ClientHandler(Socket klijent, BindingList<Administrator> admini)
         {
-            this.klijent = client;
+            this.klijent = klijent;
             this.admini = admini;
         }
 
@@ -59,7 +60,48 @@ namespace Server
             response.IsSuccessful = true;
             switch (request.Operation)
             {
-               //
+                case Operation.ObrisiKorisnika:
+                    break;
+                case Operation.ObrisiRezervaciju:
+                    break;
+                case Operation.ObrisiTermin:
+                    break;
+                case Operation.ObrisiUslugu:
+                    break;
+                case Operation.PretraziKorisnike:
+                    break;
+                case Operation.UcitajKorisnika:
+                    break;
+                case Operation.UnesiKorisnika:
+                    break;
+                case Operation.UnesiRezervacije:
+                    break;
+                case Operation.UnesiTermine:
+                    break;
+                case Operation.UnesiUslugu:
+                    break;
+                case Operation.UcitajKorisnike:
+                    break;
+                case Operation.UcitajRezervacije:
+                    break;
+                case Operation.UcitajSale:
+                    break;
+                case Operation.UcitajTermine:
+                    break;
+                case Operation.UcitajTrenere:
+                    break;
+                case Operation.UcitajUsluge:
+                    break;
+                case Operation.Login:
+                    Administrator a = Controller.Instance.Login((Administrator)request.RequestObject);
+                    if(a!= null)
+                    {
+                        a.Ulogovan = admini.Any(adm => adm.KorisnickoIme == a.KorisnickoIme); // vaj dis vi du aj dont anderstend
+                        ulogovaniAdmin = a;
+                        admini.Add(ulogovaniAdmin);
+                    }
+                    response.Result = a;
+                    break;
             }
             return response;
         }

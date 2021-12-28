@@ -1,0 +1,13 @@
+G:\Projekat\SystemOperations\obj\Debug\SystemOperations.csproj.AssemblyReference.cache
+G:\Projekat\SystemOperations\obj\Debug\SystemOperations.csproj.CoreCompileInputs.cache
+G:\Projekat\SystemOperations\bin\Debug\SystemOperations.dll
+G:\Projekat\SystemOperations\bin\Debug\SystemOperations.pdb
+G:\Projekat\SystemOperations\bin\Debug\Domen.dll
+G:\Projekat\SystemOperations\bin\Debug\Storage.dll
+G:\Projekat\SystemOperations\bin\Debug\DatabaseBroker.dll
+G:\Projekat\SystemOperations\bin\Debug\Domen.pdb
+G:\Projekat\SystemOperations\bin\Debug\Storage.pdb
+G:\Projekat\SystemOperations\bin\Debug\DatabaseBroker.pdb
+G:\Projekat\SystemOperations\obj\Debug\SystemOperations.csproj.CopyComplete
+G:\Projekat\SystemOperations\obj\Debug\SystemOperations.dll
+G:\Projekat\SystemOperations\obj\Debug\SystemOperations.pdb

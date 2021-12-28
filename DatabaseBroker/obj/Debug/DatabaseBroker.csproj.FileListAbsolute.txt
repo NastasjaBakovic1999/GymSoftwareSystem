@@ -1,0 +1,9 @@
+G:\Projekat\DatabaseBroker\bin\Debug\DatabaseBroker.dll
+G:\Projekat\DatabaseBroker\bin\Debug\DatabaseBroker.pdb
+G:\Projekat\DatabaseBroker\bin\Debug\Domen.dll
+G:\Projekat\DatabaseBroker\bin\Debug\Domen.pdb
+G:\Projekat\DatabaseBroker\obj\Debug\DatabaseBroker.csproj.AssemblyReference.cache
+G:\Projekat\DatabaseBroker\obj\Debug\DatabaseBroker.csproj.CoreCompileInputs.cache
+G:\Projekat\DatabaseBroker\obj\Debug\DatabaseBroker.csproj.CopyComplete
+G:\Projekat\DatabaseBroker\obj\Debug\DatabaseBroker.dll
+G:\Projekat\DatabaseBroker\obj\Debug\DatabaseBroker.pdb

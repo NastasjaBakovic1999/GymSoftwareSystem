@@ -12,7 +12,7 @@ namespace Domen
         public int UslugaId { get; set; }
         public string Naziv { get; set; }
         public Trener Trener { get; set; }
-        public string TableName => "Usluga"
+        public string TableName => "Usluga";
 
         public string TableAlias => throw new NotImplementedException();
 
@@ -27,6 +27,8 @@ namespace Domen
         public string WhereCondition => throw new NotImplementedException();
 
         public string InsertValues => throw new NotImplementedException();
+
+        public string GeneralCondition => throw new NotImplementedException();
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

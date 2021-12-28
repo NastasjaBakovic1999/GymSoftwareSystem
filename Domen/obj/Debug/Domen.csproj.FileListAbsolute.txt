@@ -1,0 +1,6 @@
+G:\Projekat\Domen\obj\Debug\Domen.csproj.AssemblyReference.cache
+G:\Projekat\Domen\obj\Debug\Domen.csproj.CoreCompileInputs.cache
+G:\Projekat\Domen\bin\Debug\Domen.dll
+G:\Projekat\Domen\bin\Debug\Domen.pdb
+G:\Projekat\Domen\obj\Debug\Domen.dll
+G:\Projekat\Domen\obj\Debug\Domen.pdb

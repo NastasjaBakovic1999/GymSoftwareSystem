@@ -30,6 +30,8 @@ namespace Domen
 
         public string InsertValues => throw new NotImplementedException();
 
+        public string GeneralCondition => throw new NotImplementedException();
+
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
             List<IEntity> result = new List<IEntity>();

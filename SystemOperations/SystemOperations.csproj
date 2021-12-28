@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>9d594f9e-ed30-474d-be1c-4721aea88a86</ProjectGuid>
+    <ProjectGuid>{9D594F9E-ED30-474D-BE1C-4721AEA88A86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SystemOperations</RootNamespace>
@@ -31,24 +31,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AdminSO\LoginSO.cs" />
+    <Compile Include="AdminSO\ObrisiKorisnikaSO.cs" />
+    <Compile Include="AdminSO\ObrisiRezervacijuSO.cs" />
+    <Compile Include="AdminSO\ObrisiTerminSO.cs" />
+    <Compile Include="AdminSO\ObrisiUsluguSO.cs" />
+    <Compile Include="AdminSO\PretraziKorisnikeSO.cs" />
+    <Compile Include="AdminSO\UcitajKorisnikaSO.cs" />
+    <Compile Include="AdminSO\UnesiKorisnikaSO.cs" />
+    <Compile Include="AdminSO\UnesiRezervacijeSO.cs" />
+    <Compile Include="AdminSO\UnesiTermineSO.cs" />
+    <Compile Include="AdminSO\UnesiUsluguSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemOperationBase.cs" />
+    <Compile Include="UcitajKorisnikeSO.cs" />
+    <Compile Include="UcitajRezervacijeSO.cs" />
+    <Compile Include="UcitajSaleSO.cs" />
+    <Compile Include="UcitajTermineSO.cs" />
+    <Compile Include="UcitajTrenereSO.cs" />
+    <Compile Include="UcitajUslugeSO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domen\Domen.csproj">
+      <Project>{BC6B2E20-1F54-40A6-A896-15E98D2904F8}</Project>
+      <Name>Domen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storage\Storage.csproj">
+      <Project>{849C99BE-3525-4325-80B0-42E64A9B0191}</Project>
+      <Name>Storage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

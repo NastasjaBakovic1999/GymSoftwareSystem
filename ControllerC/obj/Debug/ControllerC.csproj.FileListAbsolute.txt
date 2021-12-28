@@ -1,0 +1,15 @@
+G:\Projekat\ControllerC\bin\Debug\ControllerC.dll
+G:\Projekat\ControllerC\bin\Debug\ControllerC.pdb
+G:\Projekat\ControllerC\bin\Debug\Domen.dll
+G:\Projekat\ControllerC\bin\Debug\Storage.dll
+G:\Projekat\ControllerC\bin\Debug\SystemOperations.dll
+G:\Projekat\ControllerC\bin\Debug\DatabaseBroker.dll
+G:\Projekat\ControllerC\bin\Debug\Domen.pdb
+G:\Projekat\ControllerC\bin\Debug\Storage.pdb
+G:\Projekat\ControllerC\bin\Debug\SystemOperations.pdb
+G:\Projekat\ControllerC\bin\Debug\DatabaseBroker.pdb
+G:\Projekat\ControllerC\obj\Debug\ControllerC.csproj.AssemblyReference.cache
+G:\Projekat\ControllerC\obj\Debug\ControllerC.csproj.CoreCompileInputs.cache
+G:\Projekat\ControllerC\obj\Debug\ControllerC.csproj.CopyComplete
+G:\Projekat\ControllerC\obj\Debug\ControllerC.dll
+G:\Projekat\ControllerC\obj\Debug\ControllerC.pdb
