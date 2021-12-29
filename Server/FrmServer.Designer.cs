@@ -39,10 +39,11 @@
             // txtStatus
             // 
             this.txtStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(144, 279);
+            this.txtStatus.Font = new System.Drawing.Font("Candara", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(196, 362);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(291, 26);
+            this.txtStatus.Size = new System.Drawing.Size(312, 32);
             this.txtStatus.TabIndex = 7;
             // 
             // label1
@@ -51,11 +52,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(252, 253);
+            this.label1.Location = new System.Drawing.Point(308, 323);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 23);
+            this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Status:";
             // 
@@ -70,10 +72,11 @@
             this.btnZaustaviServer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnZaustaviServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZaustaviServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZaustaviServer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZaustaviServer.Location = new System.Drawing.Point(342, 187);
+            this.btnZaustaviServer.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZaustaviServer.Location = new System.Drawing.Point(432, 268);
+            this.btnZaustaviServer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnZaustaviServer.Name = "btnZaustaviServer";
-            this.btnZaustaviServer.Size = new System.Drawing.Size(179, 62);
+            this.btnZaustaviServer.Size = new System.Drawing.Size(196, 62);
             this.btnZaustaviServer.TabIndex = 8;
             this.btnZaustaviServer.Text = "Zaustavi server";
             this.btnZaustaviServer.UseVisualStyleBackColor = false;
@@ -90,28 +93,30 @@
             this.btnPokreniServer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPokreniServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPokreniServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPokreniServer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPokreniServer.Location = new System.Drawing.Point(67, 187);
+            this.btnPokreniServer.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPokreniServer.Location = new System.Drawing.Point(54, 268);
+            this.btnPokreniServer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPokreniServer.Name = "btnPokreniServer";
-            this.btnPokreniServer.Size = new System.Drawing.Size(179, 62);
+            this.btnPokreniServer.Size = new System.Drawing.Size(196, 62);
             this.btnPokreniServer.TabIndex = 9;
             this.btnPokreniServer.Text = "Pokreni server";
             this.btnPokreniServer.UseVisualStyleBackColor = false;
             // 
             // FrmServer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Server.Properties.Resources.gym;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(571, 383);
+            this.ClientSize = new System.Drawing.Size(682, 452);
             this.Controls.Add(this.btnPokreniServer);
             this.Controls.Add(this.btnZaustaviServer);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server";

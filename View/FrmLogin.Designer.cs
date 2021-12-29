@@ -110,6 +110,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Uloguj se";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 

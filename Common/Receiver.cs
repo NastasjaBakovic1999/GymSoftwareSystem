@@ -21,9 +21,9 @@ namespace Common
             formater = new BinaryFormatter();
         }
 
-        public void Receive()
+        public object Receive()
         {
-            formater.Deserialize(tok);
+            return formater.Deserialize(tok);
         }
     }
 }

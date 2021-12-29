@@ -9,3 +9,14 @@ G:\Projekat\View\obj\Debug\View.csproj.GenerateResource.cache
 G:\Projekat\View\obj\Debug\View.csproj.CoreCompileInputs.cache
 G:\Projekat\View\obj\Debug\View.exe
 G:\Projekat\View\obj\Debug\View.pdb
+G:\Projekat\View\bin\Debug\Common.dll
+G:\Projekat\View\bin\Debug\Domen.dll
+G:\Projekat\View\bin\Debug\Common.pdb
+G:\Projekat\View\bin\Debug\Domen.pdb
+G:\Projekat\View\obj\Debug\UserControls\UCUnosKorisnika.g.cs
+G:\Projekat\View\obj\Debug\View_MarkupCompile.cache
+G:\Projekat\View\obj\Debug\View_MarkupCompile.lref
+G:\Projekat\View\obj\Debug\UserControls\UCUnosKorisnika.baml
+G:\Projekat\View\obj\Debug\View.g.resources
+G:\Projekat\View\obj\Debug\View.FrmMain.resources
+G:\Projekat\View\obj\Debug\View.csproj.CopyComplete

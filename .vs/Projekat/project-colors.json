@@ -45,7 +45,12 @@
       "ProjectGuid": "bb5bad7d-509f-47c9-8974-93331b99c0f9",
       "DisplayName": "ControllerC",
       "ColorIndex": 7
+    },
+    "0411e099-59e4-4f56-8742-01ca41a718cf": {
+      "ProjectGuid": "0411e099-59e4-4f56-8742-01ca41a718cf",
+      "DisplayName": "View",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }
