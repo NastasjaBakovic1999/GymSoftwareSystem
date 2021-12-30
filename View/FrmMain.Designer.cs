@@ -34,8 +34,13 @@
             this.uslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sveUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminiUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNoveTermineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sveRezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNoveRezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.sviKorisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNovogKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,36 +60,69 @@
             // 
             // korisniciToolStripMenuItem
             // 
+            this.korisniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sviKorisniciToolStripMenuItem,
+            this.dodajNovogKorisnikaToolStripMenuItem});
             this.korisniciToolStripMenuItem.Name = "korisniciToolStripMenuItem";
             this.korisniciToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.korisniciToolStripMenuItem.Text = "Korisnici";
+            this.korisniciToolStripMenuItem.Click += new System.EventHandler(this.korisniciToolStripMenuItem_Click);
             // 
             // uslugeToolStripMenuItem
             // 
             this.uslugeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sveUslugeToolStripMenuItem,
-            this.terminiUslugaToolStripMenuItem});
+            this.terminiUslugaToolStripMenuItem,
+            this.dodajNoveTermineToolStripMenuItem});
             this.uslugeToolStripMenuItem.Name = "uslugeToolStripMenuItem";
             this.uslugeToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.uslugeToolStripMenuItem.Text = "Usluge";
+            this.uslugeToolStripMenuItem.Click += new System.EventHandler(this.uslugeToolStripMenuItem_Click);
             // 
             // sveUslugeToolStripMenuItem
             // 
             this.sveUslugeToolStripMenuItem.Name = "sveUslugeToolStripMenuItem";
             this.sveUslugeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sveUslugeToolStripMenuItem.Text = "Sve usluge";
+            this.sveUslugeToolStripMenuItem.Click += new System.EventHandler(this.sveUslugeToolStripMenuItem_Click);
             // 
             // terminiUslugaToolStripMenuItem
             // 
             this.terminiUslugaToolStripMenuItem.Name = "terminiUslugaToolStripMenuItem";
             this.terminiUslugaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.terminiUslugaToolStripMenuItem.Text = "Termini usluga";
+            this.terminiUslugaToolStripMenuItem.Click += new System.EventHandler(this.terminiUslugaToolStripMenuItem_Click);
+            // 
+            // dodajNoveTermineToolStripMenuItem
+            // 
+            this.dodajNoveTermineToolStripMenuItem.Name = "dodajNoveTermineToolStripMenuItem";
+            this.dodajNoveTermineToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dodajNoveTermineToolStripMenuItem.Text = "Dodaj nove termine";
+            this.dodajNoveTermineToolStripMenuItem.Click += new System.EventHandler(this.dodajNoveTermineToolStripMenuItem_Click);
             // 
             // rezervacijeToolStripMenuItem
             // 
+            this.rezervacijeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sveRezervacijeToolStripMenuItem,
+            this.dodajNoveRezervacijeToolStripMenuItem});
             this.rezervacijeToolStripMenuItem.Name = "rezervacijeToolStripMenuItem";
             this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.rezervacijeToolStripMenuItem.Text = "Rezervacije";
+            this.rezervacijeToolStripMenuItem.Click += new System.EventHandler(this.rezervacijeToolStripMenuItem_Click);
+            // 
+            // sveRezervacijeToolStripMenuItem
+            // 
+            this.sveRezervacijeToolStripMenuItem.Name = "sveRezervacijeToolStripMenuItem";
+            this.sveRezervacijeToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.sveRezervacijeToolStripMenuItem.Text = "Sve rezervacije";
+            this.sveRezervacijeToolStripMenuItem.Click += new System.EventHandler(this.sveRezervacijeToolStripMenuItem_Click);
+            // 
+            // dodajNoveRezervacijeToolStripMenuItem
+            // 
+            this.dodajNoveRezervacijeToolStripMenuItem.Name = "dodajNoveRezervacijeToolStripMenuItem";
+            this.dodajNoveRezervacijeToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.dodajNoveRezervacijeToolStripMenuItem.Text = "Dodaj nove rezervacije";
+            this.dodajNoveRezervacijeToolStripMenuItem.Click += new System.EventHandler(this.dodajNoveRezervacijeToolStripMenuItem_Click);
             // 
             // pnlMain
             // 
@@ -94,6 +132,20 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1145, 631);
             this.pnlMain.TabIndex = 1;
+            // 
+            // sviKorisniciToolStripMenuItem
+            // 
+            this.sviKorisniciToolStripMenuItem.Name = "sviKorisniciToolStripMenuItem";
+            this.sviKorisniciToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.sviKorisniciToolStripMenuItem.Text = "Svi korisnici";
+            this.sviKorisniciToolStripMenuItem.Click += new System.EventHandler(this.sviKorisniciToolStripMenuItem_Click);
+            // 
+            // dodajNovogKorisnikaToolStripMenuItem
+            // 
+            this.dodajNovogKorisnikaToolStripMenuItem.Name = "dodajNovogKorisnikaToolStripMenuItem";
+            this.dodajNovogKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.dodajNovogKorisnikaToolStripMenuItem.Text = "Dodaj novog korisnika";
+            this.dodajNovogKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogKorisnikaToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -108,6 +160,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teretana Terminator";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -125,5 +178,10 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolStripMenuItem sveUslugeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminiUslugaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNoveTermineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sveRezervacijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNoveRezervacijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sviKorisniciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNovogKorisnikaToolStripMenuItem;
     }
 }

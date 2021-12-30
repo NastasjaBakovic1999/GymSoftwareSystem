@@ -4,6 +4,7 @@ using Domen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -16,13 +17,13 @@ namespace Server
 {
     public class ClientHandler
     {
-        private Socket klijent;
+        private Socket klijentskiSoket;
         private readonly BindingList<Administrator> admini;
         private Administrator ulogovaniAdmin;
 
-        public ClientHandler(Socket klijent, BindingList<Administrator> admini)
+        public ClientHandler(Socket klijentskiSoket, BindingList<Administrator> admini)
         {
-            this.klijent = klijent;
+            this.klijentskiSoket = klijentskiSoket;
             this.admini = admini;
         }
 
@@ -30,7 +31,7 @@ namespace Server
         {
             try
             {
-                NetworkStream stream = new NetworkStream(klijent);
+                NetworkStream stream = new NetworkStream(klijentskiSoket);
                 BinaryFormatter formater = new BinaryFormatter();
                 while (true)
                 {
@@ -42,6 +43,7 @@ namespace Server
                     }
                     catch (Exception ex)
                     {
+                        Debug.WriteLine(">>>" + ex.Message);
                         response = new Response();
                         response.IsSuccessful = false;
                         response.Error = ex.Message;
@@ -99,7 +101,7 @@ namespace Server
                     Controller.Instance.UnesiUslugu((Usluga)request.RequestObject);
                     break;
                 case Operation.UcitajKorisnike:
-                    response.Result = Controller.Instance.UcitajKorisnike();
+                   response.Result = Controller.Instance.UcitajKorisnike();
                     break;
                 case Operation.UcitajRezervacije:
                     response.Result = Controller.Instance.UcitajRezervacije();
@@ -135,7 +137,7 @@ namespace Server
 
         internal void Stop()
         {
-            klijent.Close();
+            klijentskiSoket.Close();
         }
     }
 }

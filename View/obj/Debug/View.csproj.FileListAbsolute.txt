@@ -13,10 +13,12 @@ G:\Projekat\View\bin\Debug\Common.dll
 G:\Projekat\View\bin\Debug\Domen.dll
 G:\Projekat\View\bin\Debug\Common.pdb
 G:\Projekat\View\bin\Debug\Domen.pdb
-G:\Projekat\View\obj\Debug\UserControls\UCUnosKorisnika.g.cs
-G:\Projekat\View\obj\Debug\View_MarkupCompile.cache
-G:\Projekat\View\obj\Debug\View_MarkupCompile.lref
-G:\Projekat\View\obj\Debug\UserControls\UCUnosKorisnika.baml
-G:\Projekat\View\obj\Debug\View.g.resources
 G:\Projekat\View\obj\Debug\View.FrmMain.resources
 G:\Projekat\View\obj\Debug\View.csproj.CopyComplete
+G:\Projekat\View\obj\Debug\View.UserControls.UCKorisnici.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCRezervacije.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCTermini.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCUnosRezervacija.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCUnosTermina.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCUsluge.resources
+G:\Projekat\View\obj\Debug\View.UserControls.UCUnosKorisnika.resources

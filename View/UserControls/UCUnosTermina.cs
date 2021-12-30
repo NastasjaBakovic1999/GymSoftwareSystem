@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.ControllerV;
 
 namespace View.UserControls
 {
     public partial class UCUnosTermina : UserControl
     {
+        private UnosTerminaController unosTerminaController;
+
         public UCUnosTermina()
         {
             InitializeComponent();
         }
 
-        
+        public UCUnosTermina(UnosTerminaController unosTerminaController)
+        {
+            InitializeComponent();
+            this.unosTerminaController = unosTerminaController;
+        }
     }
 }

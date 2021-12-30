@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -7,27 +8,37 @@ using System.Threading.Tasks;
 
 namespace Domen
 {
+    [Serializable]
     public class Rezervacija : IEntity
     {
         public Korisnik Korisnik { get; set; }
         public Termin Termin { get; set; }
 
+        [Browsable(false)]
         public string TableName => "Rezervacija";
 
+        [Browsable(false)]
         public string TableAlias => "r";
 
+        [Browsable(false)]
         public string JoinTable => "join Korisnik k";
 
+        [Browsable(false)]
         public string JoinCondition => "on (r.KorisnikId=k.KorisnikId) join Termin t on (r.TerminId=t.TerminId)";
 
+        [Browsable(false)]
         public string WhereCondition => $"KorisnikId = {Korisnik.KorisnikId} and TerminId = {Termin.TerminId}";
 
+        [Browsable(false)]
         public object SelectValues => "*";
 
+        [Browsable(false)]
         public string UpdateValues => "";
 
+        [Browsable(false)]
         public string InsertValues => $"{Korisnik.KorisnikId}, {Termin.TerminId}";
 
+        [Browsable(false)]
         public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
@@ -50,7 +61,8 @@ namespace Domen
                     Termin = new Termin
                     {
                         TerminId = (int)reader["TerminId"],
-                        DatumVreme = (DateTime)reader["DatumVreme"],
+                        Datum = (DateTime)reader["Datum"],
+                        Vreme = (DateTime)reader["Vreme"],
                         Kapacitet = (int)reader["Kapacitet"],
                         Usluga = new Usluga
                         {

@@ -28,7 +28,15 @@ namespace View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (loginController.Connect())
+            {
+                loginController.Login(txtKorisnickoIme, txtSifra, this);
+            }
+        }
 
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

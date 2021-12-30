@@ -41,9 +41,9 @@ namespace View.ControllerV
                 admin = Communication.Instance.Login(admin);
                 if (admin != null)
                 {
-                    //MainCoordinator.Instance.Admin = admin;
+                    MainCoordinator.Instance.Administrator = admin;
                     MessageBox.Show("Uspesna prijava!");
-                    //MainCoordinator.Instance.OpenMainForm();
+                    MainCoordinator.Instance.OpenMainForm();
                     frmLogin.Dispose();
                 }
                 else

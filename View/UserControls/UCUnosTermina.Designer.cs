@@ -30,7 +30,6 @@
         {
             this.gbUnosKorisnika = new System.Windows.Forms.GroupBox();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
-            this.txtVreme = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTermini = new System.Windows.Forms.DataGridView();
             this.nudKapacitet = new System.Windows.Forms.NumericUpDown();
@@ -44,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnSacuvajTermine = new System.Windows.Forms.Button();
+            this.dtpVreme = new System.Windows.Forms.DateTimePicker();
             this.gbUnosKorisnika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKapacitet)).BeginInit();
@@ -52,8 +52,8 @@
             // gbUnosKorisnika
             // 
             this.gbUnosKorisnika.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbUnosKorisnika.Controls.Add(this.dtpVreme);
             this.gbUnosKorisnika.Controls.Add(this.btnObrisiTermin);
-            this.gbUnosKorisnika.Controls.Add(this.txtVreme);
             this.gbUnosKorisnika.Controls.Add(this.label3);
             this.gbUnosKorisnika.Controls.Add(this.dgvTermini);
             this.gbUnosKorisnika.Controls.Add(this.nudKapacitet);
@@ -92,14 +92,6 @@
             this.btnObrisiTermin.Text = "Obriši termin";
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
             // 
-            // txtVreme
-            // 
-            this.txtVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtVreme.Location = new System.Drawing.Point(831, 96);
-            this.txtVreme.Name = "txtVreme";
-            this.txtVreme.Size = new System.Drawing.Size(144, 32);
-            this.txtVreme.TabIndex = 24;
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -132,6 +124,7 @@
             // 
             // dtpDatum
             // 
+            this.dtpDatum.AllowDrop = true;
             this.dtpDatum.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDatum.Location = new System.Drawing.Point(719, 46);
             this.dtpDatum.Name = "dtpDatum";
@@ -235,6 +228,16 @@
             this.btnSacuvajTermine.Text = "Sačuvaj termine";
             this.btnSacuvajTermine.UseVisualStyleBackColor = false;
             // 
+            // dtpVreme
+            // 
+            this.dtpVreme.AllowDrop = true;
+            this.dtpVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpVreme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpVreme.Location = new System.Drawing.Point(829, 99);
+            this.dtpVreme.Name = "dtpVreme";
+            this.dtpVreme.Size = new System.Drawing.Size(146, 32);
+            this.dtpVreme.TabIndex = 25;
+            // 
             // UCUnosTermina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -266,11 +269,11 @@
         private System.Windows.Forms.DataGridView dgvTermini;
         private System.Windows.Forms.ComboBox cmbUsluge;
         private System.Windows.Forms.ComboBox cmbSale;
-        private System.Windows.Forms.TextBox txtVreme;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudKapacitet;
         private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnSacuvajTermine;
+        private System.Windows.Forms.DateTimePicker dtpVreme;
     }
 }

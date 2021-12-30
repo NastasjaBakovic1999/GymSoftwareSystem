@@ -24,15 +24,16 @@ namespace View.Helpers
             }
         }
 
-        public static bool DateValidation(TextBox txt)
+        public static bool DateValidation(DateTimePicker dtp)
         {
-            if (string.IsNullOrWhiteSpace(txt.Text) || !DateTime.TryParseExact(txt.Text, "dd.MM.yyyy.", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            if (dtp.Value.Date > DateTime.Now)
             {
-                txt.BackColor = Color.LightCoral;
+                dtp.BackColor = Color.LightCoral;
                 return false;
-            } else
+            }
+            else
             {
-                txt.BackColor = Color.White;
+                dtp.BackColor = Color.White;
                 return true;
             }
         }

@@ -16,7 +16,7 @@ namespace ControllerC
 
         #region singlton
         private static Controller instance;
-        private static object _lock;
+        private static object _lock = new object();
         private Controller()
         {
             repository=new GenericRepository();

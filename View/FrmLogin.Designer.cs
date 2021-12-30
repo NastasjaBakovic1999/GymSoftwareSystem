@@ -42,11 +42,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(201, 174);
+            this.label1.Location = new System.Drawing.Point(193, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 23);
+            this.label1.Size = new System.Drawing.Size(136, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Korisničko ime";
             // 
@@ -54,28 +54,31 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(249, 254);
+            this.label2.Location = new System.Drawing.Point(231, 249);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 23);
+            this.label2.Size = new System.Drawing.Size(50, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Šifra";
             // 
             // txtKorisnickoIme
             // 
             this.txtKorisnickoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(140, 218);
+            this.txtKorisnickoIme.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(128, 199);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(257, 23);
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(257, 32);
             this.txtKorisnickoIme.TabIndex = 3;
             // 
             // txtSifra
             // 
             this.txtSifra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSifra.Location = new System.Drawing.Point(140, 292);
+            this.txtSifra.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSifra.Location = new System.Drawing.Point(128, 290);
             this.txtSifra.Name = "txtSifra";
-            this.txtSifra.Size = new System.Drawing.Size(257, 23);
+            this.txtSifra.PasswordChar = '*';
+            this.txtSifra.Size = new System.Drawing.Size(257, 32);
             this.txtSifra.TabIndex = 4;
             // 
             // pbLockPic
@@ -84,7 +87,7 @@
             this.pbLockPic.BackColor = System.Drawing.Color.Transparent;
             this.pbLockPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbLockPic.Image = global::View.Properties.Resources._lock;
-            this.pbLockPic.Location = new System.Drawing.Point(155, 31);
+            this.pbLockPic.Location = new System.Drawing.Point(148, 30);
             this.pbLockPic.Name = "pbLockPic";
             this.pbLockPic.Size = new System.Drawing.Size(217, 119);
             this.pbLockPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,9 +105,9 @@
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(176, 353);
+            this.btnLogin.Location = new System.Drawing.Point(171, 349);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(178, 56);
             this.btnLogin.TabIndex = 0;
@@ -129,6 +132,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbLockPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -57,5 +57,6 @@ namespace Server
             txtStatus.Text = "Server nije pokrenut!";
             txtStatus.BackColor = Color.Coral;
         }
+
     }
 }

@@ -22,7 +22,7 @@ namespace View
             {
                 try
                 {
-                    //MainCoordinator.Instance.OpenLoginForm();
+                    MainCoordinator.Instance.OpenLoginForm();
                     Application.Run();
                 }
                 catch (ServerException se)

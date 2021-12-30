@@ -101,6 +101,7 @@
             this.btnPokreniServer.TabIndex = 9;
             this.btnPokreniServer.Text = "Pokreni server";
             this.btnPokreniServer.UseVisualStyleBackColor = false;
+            this.btnPokreniServer.Click += new System.EventHandler(this.btnPokreniServer_Click);
             // 
             // FrmServer
             // 

@@ -52,8 +52,15 @@
   <ItemGroup>
     <Compile Include="CommunicationF\Communication.cs" />
     <Compile Include="CommunicationF\CommunicationClient.cs" />
+    <Compile Include="ControllerV\KorisniciController.cs" />
     <Compile Include="ControllerV\LoginController.cs" />
     <Compile Include="ControllerV\MainController.cs" />
+    <Compile Include="ControllerV\RezervacijeController.cs" />
+    <Compile Include="ControllerV\TerminiController.cs" />
+    <Compile Include="ControllerV\UnosKorisnikaController.cs" />
+    <Compile Include="ControllerV\UnosRezervacijaController.cs" />
+    <Compile Include="ControllerV\UnosTerminaController.cs" />
+    <Compile Include="ControllerV\UslugeController.cs" />
     <Compile Include="Exceptions\ServerException.cs" />
     <Compile Include="Exceptions\SystemNotFoundException.cs" />
     <Compile Include="Exceptions\SystemOperationException.cs" />
@@ -73,23 +80,41 @@
     <Compile Include="MainCoordinator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UCUnosUsluge.cs">
+    <Compile Include="UserControls\UCRezervacije.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCUnosUsluge.Designer.cs">
-      <DependentUpon>UCUnosUsluge.cs</DependentUpon>
+    <Compile Include="UserControls\UCRezervacije.Designer.cs">
+      <DependentUpon>UCRezervacije.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCKorisnici.cs">
+    <Compile Include="UserControls\UCTermini.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCKorisnici.Designer.cs">
-      <DependentUpon>UCKorisnici.cs</DependentUpon>
+    <Compile Include="UserControls\UCTermini.Designer.cs">
+      <DependentUpon>UCTermini.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCUnosKorisnika.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCUnosKorisnika.Designer.cs">
       <DependentUpon>UCUnosKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCUnosRezervacija.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCUnosRezervacija.Designer.cs">
+      <DependentUpon>UCUnosRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCUnosTermina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCUnosTermina.Designer.cs">
+      <DependentUpon>UCUnosTermina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCKorisnici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCKorisnici.Designer.cs">
+      <DependentUpon>UCKorisnici.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCUsluge.cs">
       <SubType>UserControl</SubType>
@@ -107,6 +132,27 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCKorisnici.resx">
+      <DependentUpon>UCKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacije.resx">
+      <DependentUpon>UCRezervacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCTermini.resx">
+      <DependentUpon>UCTermini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCUnosKorisnika.resx">
+      <DependentUpon>UCUnosKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCUnosRezervacija.resx">
+      <DependentUpon>UCUnosRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCUnosTermina.resx">
+      <DependentUpon>UCUnosTermina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCUsluge.resx">
+      <DependentUpon>UCUsluge.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,7 +188,9 @@
       <Name>Domen</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\fitness.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gym_wall.jpg" />
   </ItemGroup>

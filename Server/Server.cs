@@ -16,7 +16,9 @@ namespace Server
     {
         private Socket osluskujuciSoket;
         private List<ClientHandler> klijenti = new List<ClientHandler>();
-        private BindingList<Administrator> Administratori { get; }=new BindingList<Administrator>();
+        private BindingList<Administrator> administratori =new BindingList<Administrator>();
+
+        public BindingList<Administrator> Administartori { get { return administratori; } }
 
         public Server()
         {
@@ -39,7 +41,7 @@ namespace Server
                 try
                 {
                     Socket klijentskiSoket = osluskujuciSoket.Accept();
-                    ClientHandler handler = new ClientHandler(klijentskiSoket, Administratori);
+                    ClientHandler handler = new ClientHandler(klijentskiSoket, administratori);
                     klijenti.Add(handler);
                     Thread klijentskaNit = new Thread(handler.StartHandler);
                     klijentskaNit.IsBackground = true;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -7,28 +8,38 @@ using System.Threading.Tasks;
 
 namespace Domen
 {
+    [Serializable]
     public class Usluga : IEntity
     {
         public int UslugaId { get; set; }
         public string Naziv { get; set; }
         public Trener Trener { get; set; }
 
+        [Browsable(false)]
         public string TableName => "Usluga";
 
+        [Browsable(false)]
         public string TableAlias => "u";
 
+        [Browsable(false)]
         public string JoinTable => "join Trener tren";
 
+        [Browsable(false)]
         public string JoinCondition => "on u.TrenerId=tren.TrenerId";
 
+        [Browsable(false)]
         public object SelectValues => "*";
 
+        [Browsable(false)]
         public string UpdateValues => "";
 
+        [Browsable(false)]
         public string WhereCondition => $"UslugaId={UslugaId}";
 
+        [Browsable(false)]
         public string InsertValues => $"'{Naziv}', {Trener.TrenerId}";
 
+        [Browsable(false)]
         public string GeneralCondition => "";
 
         public List<IEntity> GetEntities(SqlDataReader reader)
