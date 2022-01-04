@@ -44,6 +44,12 @@ namespace View.ControllerV
                     DatumRodjenja = dtpDatumRodjenja.Value.Date
                 };
 
+                if (Communication.Instance.UcitajKorisnike().Any(kor=>kor.JMBG==korisnik.JMBG))
+                {
+                    MessageBox.Show("Sistem ne može da unese korisnika koji već postoji u bazi korisnika! (Korisnik sa istim JMBG se već nalazi u bazi)");
+                    return;
+                }
+
                 Communication.Instance.UnesiKorisnika(korisnik);
                 MessageBox.Show("Korisnik je uspešno sačuvan!");
                 txtIme.Text = "";

@@ -11,3 +11,6 @@ G:\Projekat\SystemOperations\bin\Debug\DatabaseBroker.pdb
 G:\Projekat\SystemOperations\obj\Debug\SystemOperations.csproj.CopyComplete
 G:\Projekat\SystemOperations\obj\Debug\SystemOperations.dll
 G:\Projekat\SystemOperations\obj\Debug\SystemOperations.pdb
+G:\Projekat\SystemOperations\bin\Debug\SystemOperations.dll.config
+G:\Projekat\SystemOperations\bin\Debug\Storage.dll.config
+G:\Projekat\SystemOperations\bin\Debug\DatabaseBroker.dll.config

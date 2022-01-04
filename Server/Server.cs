@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -27,9 +28,7 @@ namespace Server
 
         public void Start()
         {
-            // HARDKODOVANO !!!!! TREBA ISPRAVITI
-            // int.Parse(ConfigurationManager.AppSettings["port"])
-            osluskujuciSoket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999));
+            osluskujuciSoket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), int.Parse(ConfigurationManager.AppSettings["port"])));
         }
 
         public void Listen()

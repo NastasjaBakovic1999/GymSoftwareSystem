@@ -94,14 +94,29 @@ namespace View.ControllerV
                 return;
             }
 
-            uCUnosTermina.termini.Add(new Termin
+            Termin termin = new Termin
             {
                 Datum = dtpDatum.Value.Date,
                 Vreme = new TimeSpan(int.Parse(txtSati.Text), int.Parse(txtMinuti.Text), 0),
                 Kapacitet = (int)nudKapacitet.Value,
                 Sala = (Sala)cmbSale.SelectedItem,
                 Usluga = (Usluga)cmbUsluge.SelectedItem
-            });
+            };
+
+            if(Communication.Instance.UcitajTermine()
+                .Any(ter=>ter.Usluga.Naziv==termin.Usluga.Naziv && ter.Sala.BrojSale==termin.Sala.BrojSale && ter.Datum == termin.Datum && ter.Vreme == ter.Vreme))
+            {
+                MessageBox.Show("Sistem ne može da unese termin jer se on već nalazi u bazi!");
+                return;
+            }
+
+            if (uCUnosTermina.termini.Any(ter => ter.Usluga.Naziv == termin.Usluga.Naziv && ter.Sala.BrojSale == termin.Sala.BrojSale && ter.Datum == termin.Datum && ter.Vreme == ter.Vreme))
+            {
+                MessageBox.Show("Sistem ne može da unese termin jer se on već nalazi u listi termina za čuvanje!");
+                return;
+            }
+
+            uCUnosTermina.termini.Add(termin);
 
             dtpDatum.Value = DateTime.Today;
             txtSati.Text = "";
@@ -142,6 +157,8 @@ namespace View.ControllerV
                 MessageBox.Show("Novi termini su uspešno sačuvani!");
                 uCUnosTermina.termini.Clear();
                 dgvTermini.DataSource = null;
+
+
             }
             catch (SystemOperationException)
             {

@@ -22,3 +22,7 @@ G:\Projekat\Server\bin\Debug\ControllerC.pdb
 G:\Projekat\Server\bin\Debug\Storage.pdb
 G:\Projekat\Server\bin\Debug\SystemOperations.pdb
 G:\Projekat\Server\bin\Debug\DatabaseBroker.pdb
+G:\Projekat\Server\bin\Debug\ControllerC.dll.config
+G:\Projekat\Server\bin\Debug\Storage.dll.config
+G:\Projekat\Server\bin\Debug\SystemOperations.dll.config
+G:\Projekat\Server\bin\Debug\DatabaseBroker.dll.config

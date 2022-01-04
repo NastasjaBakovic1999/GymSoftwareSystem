@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domen;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using View.CommunicationF;
 
 namespace View.Helpers
 {
@@ -63,6 +65,8 @@ namespace View.Helpers
                 return true;
             }
         }
+
+     
 
         public static bool JMBGValidation(TextBox txt)
         {

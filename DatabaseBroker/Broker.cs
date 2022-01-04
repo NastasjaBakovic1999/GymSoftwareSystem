@@ -1,6 +1,7 @@
 ﻿using Domen;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,9 @@ namespace DatabaseBroker
         private SqlConnection connection;
         private SqlTransaction transaction;
 
-        //ovo treba izmeniti, tj da ne bude hardcode-ovano
         public Broker()
         {
-            connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PSProjekat;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TeretanaTerminatorBase"].ConnectionString);
         }
 
         public void OpenConnection()

@@ -13,3 +13,7 @@ G:\Projekat\ControllerC\obj\Debug\ControllerC.csproj.CoreCompileInputs.cache
 G:\Projekat\ControllerC\obj\Debug\ControllerC.csproj.CopyComplete
 G:\Projekat\ControllerC\obj\Debug\ControllerC.dll
 G:\Projekat\ControllerC\obj\Debug\ControllerC.pdb
+G:\Projekat\ControllerC\bin\Debug\ControllerC.dll.config
+G:\Projekat\ControllerC\bin\Debug\Storage.dll.config
+G:\Projekat\ControllerC\bin\Debug\SystemOperations.dll.config
+G:\Projekat\ControllerC\bin\Debug\DatabaseBroker.dll.config

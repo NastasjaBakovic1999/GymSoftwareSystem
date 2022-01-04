@@ -111,6 +111,12 @@ namespace View.ControllerV
                    Trener = (Trener)cmbTrener.SelectedItem
                 };
 
+                if (Communication.Instance.UcitajUsluge().Any(usl => usl.Naziv == usluga.Naziv))
+                {
+                    MessageBox.Show("Sistem ne može da sačuva uslugu jer se ona već nalazi u bazi podataka.");
+                    return;
+                }
+
                 Communication.Instance.UnesiUslugu(usluga);
                 MessageBox.Show("Usluga je uspešno sačuvana!");
                 txtNazivUsluge.Text = "";

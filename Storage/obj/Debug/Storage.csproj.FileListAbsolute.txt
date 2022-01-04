@@ -9,3 +9,5 @@ G:\Projekat\Storage\obj\Debug\Storage.csproj.CoreCompileInputs.cache
 G:\Projekat\Storage\obj\Debug\Storage.csproj.CopyComplete
 G:\Projekat\Storage\obj\Debug\Storage.dll
 G:\Projekat\Storage\obj\Debug\Storage.pdb
+G:\Projekat\Storage\bin\Debug\Storage.dll.config
+G:\Projekat\Storage\bin\Debug\DatabaseBroker.dll.config

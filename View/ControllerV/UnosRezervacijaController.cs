@@ -50,11 +50,26 @@ namespace View.ControllerV
                 return;
             }
 
-            uCUnosRezervacija.rezervacije.Add(new Rezervacija
+            Rezervacija rezervacija = new Rezervacija
             {
                 Korisnik = (Korisnik)cmbKorisnici.SelectedItem,
                 Termin = (Termin)cmbTermini.SelectedItem
-            });
+            };
+
+            if (Communication.Instance.UcitajRezervacije()
+                 .Any(rez=>rez.Termin.TerminId==rezervacija.Termin.TerminId && rez.Korisnik.KorisnikId == rezervacija.Korisnik.KorisnikId))
+            {
+                MessageBox.Show("Sistem ne može da unese rezervaciju jer se ona već nalazi u bazi!");
+                return;
+            }
+
+            if (uCUnosRezervacija.rezervacije.Any(rez => rez.Termin.TerminId == rezervacija.Termin.TerminId && rez.Korisnik.KorisnikId == rezervacija.Korisnik.KorisnikId))
+            {
+                MessageBox.Show("Sistem ne može da unese rzeervaciju jer se ona već nalazi u listi rezervacija za čuvanje!");
+                return;
+            }
+
+            uCUnosRezervacija.rezervacije.Add(rezervacija);
 
             cmbTermini.SelectedIndex = -1;
             cmbKorisnici.SelectedIndex = -1;
@@ -107,6 +122,8 @@ namespace View.ControllerV
                 MessageBox.Show("Nove rezervacije su uspešno sačuvane!");
                 uCUnosRezervacija.rezervacije.Clear();
                 dgvRezervacije.DataSource = null;
+
+
             }
             catch (SystemOperationException)
             {
