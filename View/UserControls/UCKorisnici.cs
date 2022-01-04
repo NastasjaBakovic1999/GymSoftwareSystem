@@ -47,7 +47,7 @@ namespace View.UserControls
 
         private void btnPrikaziDetalje_Click(object sender, EventArgs e)
         {
-            korisniciController.UcitajKorisnika(dgvKorisnici, txtIme, txtPrezime, txtAdresa, txtJMBG, dtpDatumRodjenja);
+            korisniciController.UcitajKorisnika(dgvKorisnici, txtIme, txtPrezime, txtAdresa, txtJMBG, txtDatumRodjenja);
         }
 
         //private void UCKorisnici_Load(object sender, EventArgs e)

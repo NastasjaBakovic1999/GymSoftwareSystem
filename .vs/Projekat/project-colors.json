@@ -40,7 +40,12 @@
       "ProjectGuid": "849c99be-3525-4325-80b0-42e64a9b0191",
       "DisplayName": "Storage",
       "ColorIndex": 6
+    },
+    "4914dfe6-5574-4912-b392-6f6d663e328c": {
+      "ProjectGuid": "4914dfe6-5574-4912-b392-6f6d663e328c",
+      "DisplayName": "Common",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

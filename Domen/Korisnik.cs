@@ -40,7 +40,7 @@ namespace Domen
         public string WhereCondition => $"KorisnikId={KorisnikId}";
 
         [Browsable(false)]
-        public string InsertValues => $"'{JMBG}','{Ime}', '{Prezime}', '{DatumRodjenja.ToString("yyyyMMdd")}', '{Adresa}'";
+        public string InsertValues => $"'{JMBG}','{Ime}', '{Prezime}', '{DatumRodjenja}', '{Adresa}'";
 
         [Browsable(false)]
         public string Uslov;
@@ -48,10 +48,11 @@ namespace Domen
         [Browsable(false)]
         public string GeneralCondition => $"{Uslov}";
 
-        //public override string ToString()
-        //{
-        //    return ;
-        //}
+        public override string ToString()
+        {
+            return $"{Ime} {Prezime}";
+        }
+
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
             List<IEntity> result = new List<IEntity>();

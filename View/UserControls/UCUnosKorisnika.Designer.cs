@@ -47,10 +47,12 @@
             // dtpDatumRodjenja
             // 
             this.dtpDatumRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDatumRodjenja.CustomFormat = "dd.MM.yyyy";
+            this.dtpDatumRodjenja.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDatumRodjenja.Location = new System.Drawing.Point(193, 316);
             this.dtpDatumRodjenja.MaxDate = new System.DateTime(7999, 12, 30, 0, 0, 0, 0);
             this.dtpDatumRodjenja.Name = "dtpDatumRodjenja";
-            this.dtpDatumRodjenja.Size = new System.Drawing.Size(295, 32);
+            this.dtpDatumRodjenja.Size = new System.Drawing.Size(303, 32);
             this.dtpDatumRodjenja.TabIndex = 10;
             this.dtpDatumRodjenja.Value = new System.DateTime(2021, 12, 29, 0, 0, 0, 0);
             // 
@@ -59,7 +61,7 @@
             this.txtAdresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdresa.Location = new System.Drawing.Point(193, 377);
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(295, 32);
+            this.txtAdresa.Size = new System.Drawing.Size(303, 32);
             this.txtAdresa.TabIndex = 9;
             // 
             // txtJMBG
@@ -68,7 +70,7 @@
             this.txtJMBG.Location = new System.Drawing.Point(193, 256);
             this.txtJMBG.MaxLength = 13;
             this.txtJMBG.Name = "txtJMBG";
-            this.txtJMBG.Size = new System.Drawing.Size(295, 32);
+            this.txtJMBG.Size = new System.Drawing.Size(303, 32);
             this.txtJMBG.TabIndex = 8;
             // 
             // txtPrezime
@@ -76,7 +78,7 @@
             this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrezime.Location = new System.Drawing.Point(193, 195);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(295, 32);
+            this.txtPrezime.Size = new System.Drawing.Size(303, 32);
             this.txtPrezime.TabIndex = 7;
             // 
             // txtIme
@@ -84,7 +86,7 @@
             this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIme.Location = new System.Drawing.Point(193, 137);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(295, 32);
+            this.txtIme.Size = new System.Drawing.Size(303, 32);
             this.txtIme.TabIndex = 6;
             // 
             // label8
@@ -146,9 +148,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::View.Properties.Resources.fitness;
-            this.pictureBox1.Location = new System.Drawing.Point(517, 137);
+            this.pictureBox1.Location = new System.Drawing.Point(552, 137);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(406, 349);
+            this.pictureBox1.Size = new System.Drawing.Size(371, 349);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;

@@ -140,6 +140,7 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlMain.BackgroundImage = global::View.Properties.Resources.gym_wall;
             this.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMain.Location = new System.Drawing.Point(0, 31);
@@ -151,6 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1145, 656);
             this.Controls.Add(this.pnlMain);

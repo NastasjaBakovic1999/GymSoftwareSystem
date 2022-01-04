@@ -32,7 +32,7 @@ namespace View.UserControls
 
         private void btnDodajTermin_Click(object sender, EventArgs e)
         {
-            unosTerminaController.UnesiTermin(cmbUsluge, cmbSale, nudKapacitet, dtpDatum, dtpVreme,dgvTermini, this);
+            unosTerminaController.UnesiTermin(cmbUsluge, cmbSale, nudKapacitet, dtpDatum,dgvTermini,txtSati,txtMinuti, this);
             dgvTermini.DataSource = null;
             unosTerminaController.UcitajTermine(dgvTermini, this);
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
             this.btnObrisiRezervaciju = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +37,10 @@
             // 
             // dgvRezervacije
             // 
+            this.dgvRezervacije.AllowUserToAddRows = false;
+            this.dgvRezervacije.AllowUserToDeleteRows = false;
+            this.dgvRezervacije.AllowUserToResizeColumns = false;
+            this.dgvRezervacije.AllowUserToResizeRows = false;
             this.dgvRezervacije.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvRezervacije.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -49,14 +52,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRezervacije.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRezervacije.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRezervacije.Location = new System.Drawing.Point(47, 101);
             this.dgvRezervacije.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRezervacije.Name = "dgvRezervacije";
@@ -107,6 +102,7 @@
             this.Controls.Add(this.btnObrisiRezervaciju);
             this.Controls.Add(this.dgvRezervacije);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCRezervacije";
             this.Size = new System.Drawing.Size(1145, 631);

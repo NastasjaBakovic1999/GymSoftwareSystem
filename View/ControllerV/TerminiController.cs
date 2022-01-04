@@ -36,6 +36,9 @@ namespace View.ControllerV
 
                     dgvTermini.Columns["Usluga"].HeaderText = "Usluga - Trener";
 
+                    dgvTermini.Columns["Datum"].DefaultCellStyle.Format = "dd.MM.yyyy";
+                    dgvTermini.Columns["Vreme"].DefaultCellStyle.Format = @"hh\:mm";
+
                     dgvTermini.Columns["Datum"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                     dgvTermini.Columns["Vreme"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                     dgvTermini.Columns["Kapacitet"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;

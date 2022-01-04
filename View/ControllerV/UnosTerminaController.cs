@@ -54,7 +54,12 @@ namespace View.ControllerV
 
             dgvTermini.DataSource = uCUnosTermina.termini;
 
+            dgvTermini.Columns["TerminId"].Visible = false;
+
             dgvTermini.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgvTermini.Columns["Datum"].DefaultCellStyle.Format = "dd.MM.yyyy";
+            dgvTermini.Columns["Vreme"].DefaultCellStyle.Format = @"hh\:mm";
 
             dgvTermini.Columns["Datum"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvTermini.Columns["Vreme"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -63,7 +68,7 @@ namespace View.ControllerV
             dgvTermini.Columns["Usluga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        internal void UnesiTermin(ComboBox cmbUsluge, ComboBox cmbSale, NumericUpDown nudKapacitet, DateTimePicker dtpDatum, DateTimePicker dtpVreme, DataGridView dgvTermini, UCUnosTermina uCUnosTermina)
+        internal void UnesiTermin(ComboBox cmbUsluge, ComboBox cmbSale, NumericUpDown nudKapacitet, DateTimePicker dtpDatum, DataGridView dgvTermini, TextBox txtSati, TextBox txtMinuti, UCUnosTermina uCUnosTermina)
         {
             if(!UserControlHelpers.ComboBoxValidation(cmbUsluge) | !UserControlHelpers.ComboBoxValidation(cmbSale))
             {
@@ -77,6 +82,12 @@ namespace View.ControllerV
                 return;
             }
 
+            if (!UserControlHelpers.TimeValidation(txtSati, txtMinuti) | !UserControlHelpers.EmptyFieldValidation(txtSati) | !UserControlHelpers.EmptyFieldValidation(txtMinuti)) 
+            {
+                MessageBox.Show("Pogrešan unos vremena! Možete uneti samo brojeve i vreme u 24-časovnom formatu!");
+                return;
+            }
+
             if (!UserControlHelpers.NumberPickerValidation(nudKapacitet))
             {
                 MessageBox.Show("Kapacitet ne moze biti ispod 20 ili preko 100!");
@@ -86,13 +97,15 @@ namespace View.ControllerV
             uCUnosTermina.termini.Add(new Termin
             {
                 Datum = dtpDatum.Value.Date,
-                Vreme = dtpVreme.Value.TimeOfDay,
+                Vreme = new TimeSpan(int.Parse(txtSati.Text), int.Parse(txtMinuti.Text), 0),
                 Kapacitet = (int)nudKapacitet.Value,
                 Sala = (Sala)cmbSale.SelectedItem,
                 Usluga = (Usluga)cmbUsluge.SelectedItem
             });
 
             dtpDatum.Value = DateTime.Today;
+            txtSati.Text = "";
+            txtMinuti.Text = "";
             nudKapacitet.Value = 0;
             cmbSale.SelectedIndex = -1;
             cmbUsluge.SelectedIndex = -1;

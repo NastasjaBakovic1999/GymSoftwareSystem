@@ -40,10 +40,15 @@ namespace Domen
         public string WhereCondition => $"TerminId={TerminId}";
 
         [Browsable(false)]
-        public string InsertValues => $"'{Datum.ToShortDateString()}', '{Vreme}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
+        public string InsertValues => $"'{Datum:dd'.'MM'.'yyyy}', '{Vreme:hh\\:mm}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
 
         [Browsable(false)]
         public string GeneralCondition => "";
+
+        public override string ToString()
+        {
+            return $"{Usluga.Naziv} - {Datum:dd.mm.yyyy} u {Vreme:hh\\:mm} sati";
+        }
 
         public List<IEntity> GetEntities(SqlDataReader reader)
         {

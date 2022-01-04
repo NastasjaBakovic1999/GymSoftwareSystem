@@ -40,7 +40,6 @@
             this.btnSviKorisnici = new System.Windows.Forms.Button();
             this.btnObrisiKorisnika = new System.Windows.Forms.Button();
             this.btnPretrazi = new System.Windows.Forms.Button();
-            this.dtpDatumRodjenja = new System.Windows.Forms.DateTimePicker();
             this.txtAdresa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtJMBG = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.gbDetaljiOKorisniku = new System.Windows.Forms.GroupBox();
+            this.txtDatumRodjenja = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.gbDetaljiOKorisniku.SuspendLayout();
             this.SuspendLayout();
@@ -201,16 +201,6 @@
             this.btnPretrazi.UseVisualStyleBackColor = false;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
-            // dtpDatumRodjenja
-            // 
-            this.dtpDatumRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDatumRodjenja.Location = new System.Drawing.Point(187, 237);
-            this.dtpDatumRodjenja.MaxDate = new System.DateTime(2021, 12, 30, 0, 0, 0, 0);
-            this.dtpDatumRodjenja.Name = "dtpDatumRodjenja";
-            this.dtpDatumRodjenja.Size = new System.Drawing.Size(295, 32);
-            this.dtpDatumRodjenja.TabIndex = 20;
-            this.dtpDatumRodjenja.Value = new System.DateTime(2021, 12, 29, 0, 0, 0, 0);
-            // 
             // txtAdresa
             // 
             this.txtAdresa.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -302,8 +292,8 @@
             // gbDetaljiOKorisniku
             // 
             this.gbDetaljiOKorisniku.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbDetaljiOKorisniku.Controls.Add(this.txtDatumRodjenja);
             this.gbDetaljiOKorisniku.Controls.Add(this.txtAdresa);
-            this.gbDetaljiOKorisniku.Controls.Add(this.dtpDatumRodjenja);
             this.gbDetaljiOKorisniku.Controls.Add(this.label8);
             this.gbDetaljiOKorisniku.Controls.Add(this.label7);
             this.gbDetaljiOKorisniku.Controls.Add(this.label4);
@@ -319,6 +309,15 @@
             this.gbDetaljiOKorisniku.TabIndex = 21;
             this.gbDetaljiOKorisniku.TabStop = false;
             this.gbDetaljiOKorisniku.Text = "Detalji o korisniku";
+            // 
+            // txtDatumRodjenja
+            // 
+            this.txtDatumRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDatumRodjenja.Location = new System.Drawing.Point(187, 237);
+            this.txtDatumRodjenja.MaxLength = 13;
+            this.txtDatumRodjenja.Name = "txtDatumRodjenja";
+            this.txtDatumRodjenja.Size = new System.Drawing.Size(295, 32);
+            this.txtDatumRodjenja.TabIndex = 20;
             // 
             // UCKorisnici
             // 
@@ -360,7 +359,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.Button btnSviKorisnici;
         private System.Windows.Forms.Button btnPrikaziDetalje;
-        private System.Windows.Forms.DateTimePicker dtpDatumRodjenja;
         private System.Windows.Forms.TextBox txtAdresa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtJMBG;
@@ -371,5 +369,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox gbDetaljiOKorisniku;
+        private System.Windows.Forms.TextBox txtDatumRodjenja;
     }
 }

@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbUnosKorisnika = new System.Windows.Forms.GroupBox();
-            this.dtpVreme = new System.Windows.Forms.DateTimePicker();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTermini = new System.Windows.Forms.DataGridView();
             this.nudKapacitet = new System.Windows.Forms.NumericUpDown();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.cmbSale = new System.Windows.Forms.ComboBox();
             this.cmbUsluge = new System.Windows.Forms.ComboBox();
             this.btnDodajTermin = new System.Windows.Forms.Button();
@@ -45,6 +42,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnSacuvajTermine = new System.Windows.Forms.Button();
+            this.txtMinuti = new System.Windows.Forms.TextBox();
+            this.txtSati = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.gbUnosKorisnika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKapacitet)).BeginInit();
@@ -53,12 +54,14 @@
             // gbUnosKorisnika
             // 
             this.gbUnosKorisnika.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbUnosKorisnika.Controls.Add(this.dtpVreme);
+            this.gbUnosKorisnika.Controls.Add(this.dtpDatum);
+            this.gbUnosKorisnika.Controls.Add(this.label8);
+            this.gbUnosKorisnika.Controls.Add(this.txtSati);
+            this.gbUnosKorisnika.Controls.Add(this.txtMinuti);
             this.gbUnosKorisnika.Controls.Add(this.btnObrisiTermin);
             this.gbUnosKorisnika.Controls.Add(this.label3);
             this.gbUnosKorisnika.Controls.Add(this.dgvTermini);
             this.gbUnosKorisnika.Controls.Add(this.nudKapacitet);
-            this.gbUnosKorisnika.Controls.Add(this.dtpDatum);
             this.gbUnosKorisnika.Controls.Add(this.cmbSale);
             this.gbUnosKorisnika.Controls.Add(this.cmbUsluge);
             this.gbUnosKorisnika.Controls.Add(this.btnDodajTermin);
@@ -73,16 +76,6 @@
             this.gbUnosKorisnika.TabIndex = 16;
             this.gbUnosKorisnika.TabStop = false;
             this.gbUnosKorisnika.Text = "Unos novog termina";
-            // 
-            // dtpVreme
-            // 
-            this.dtpVreme.AllowDrop = true;
-            this.dtpVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpVreme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpVreme.Location = new System.Drawing.Point(768, 99);
-            this.dtpVreme.Name = "dtpVreme";
-            this.dtpVreme.Size = new System.Drawing.Size(207, 32);
-            this.dtpVreme.TabIndex = 25;
             // 
             // btnObrisiTermin
             // 
@@ -119,14 +112,6 @@
             this.dgvTermini.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvTermini.BackgroundColor = System.Drawing.Color.White;
             this.dgvTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTermini.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTermini.Location = new System.Drawing.Point(50, 257);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
@@ -141,16 +126,6 @@
             this.nudKapacitet.Name = "nudKapacitet";
             this.nudKapacitet.Size = new System.Drawing.Size(144, 32);
             this.nudKapacitet.TabIndex = 22;
-            // 
-            // dtpDatum
-            // 
-            this.dtpDatum.AllowDrop = true;
-            this.dtpDatum.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDatum.Location = new System.Drawing.Point(719, 46);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(256, 32);
-            this.dtpDatum.TabIndex = 20;
             // 
             // cmbSale
             // 
@@ -251,6 +226,46 @@
             this.btnSacuvajTermine.UseVisualStyleBackColor = false;
             this.btnSacuvajTermine.Click += new System.EventHandler(this.btnSacuvajTermine_Click);
             // 
+            // txtMinuti
+            // 
+            this.txtMinuti.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMinuti.Location = new System.Drawing.Point(938, 93);
+            this.txtMinuti.MaxLength = 2;
+            this.txtMinuti.Name = "txtMinuti";
+            this.txtMinuti.Size = new System.Drawing.Size(37, 32);
+            this.txtMinuti.TabIndex = 30;
+            // 
+            // txtSati
+            // 
+            this.txtSati.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSati.Location = new System.Drawing.Point(867, 93);
+            this.txtSati.MaxLength = 2;
+            this.txtSati.Name = "txtSati";
+            this.txtSati.Size = new System.Drawing.Size(37, 32);
+            this.txtSati.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(910, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 35);
+            this.label8.TabIndex = 32;
+            this.label8.Text = ":";
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.CustomFormat = "dd.MM.yyyy";
+            this.dtpDatum.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDatum.Location = new System.Drawing.Point(655, 46);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(320, 32);
+            this.dtpDatum.TabIndex = 33;
+            this.dtpDatum.Value = new System.DateTime(2022, 1, 4, 0, 0, 0, 0);
+            // 
             // UCUnosTermina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -285,9 +300,11 @@
         private System.Windows.Forms.ComboBox cmbSale;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudKapacitet;
-        private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnSacuvajTermine;
-        private System.Windows.Forms.DateTimePicker dtpVreme;
+        private System.Windows.Forms.DateTimePicker dtpDatum;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtSati;
+        private System.Windows.Forms.TextBox txtMinuti;
     }
 }

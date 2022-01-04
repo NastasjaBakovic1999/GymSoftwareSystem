@@ -38,7 +38,7 @@ namespace View.Helpers
 
         public static bool DateValidation(DateTimePicker dtp)
         {
-            if (dtp.Value.Date < DateTime.Now)
+            if (dtp.Value.Date < DateTime.Today)
             {
                 dtp.BackColor = Color.LightCoral;
                 return false;
@@ -75,6 +75,33 @@ namespace View.Helpers
             {
                 txt.BackColor = Color.White;
                 return true;
+            }
+        }
+
+        internal static bool TimeValidation(TextBox txtSati, TextBox txtMinuti)
+        {
+            int sati;
+            int minuti;
+
+            if (!int.TryParse(txtSati.Text, out sati) | !int.TryParse(txtMinuti.Text, out minuti))
+            {
+                txtSati.BackColor = Color.LightCoral;
+                txtMinuti.BackColor = Color.LightCoral;
+                return false;
+            }
+            else
+            {
+                if(sati>23 | sati<0 | minuti>59 | minuti < 0)
+                {
+                    txtSati.BackColor = Color.LightCoral;
+                    txtMinuti.BackColor = Color.LightCoral;
+                    return false;
+                } else
+                {
+                    txtSati.BackColor = Color.White;
+                    txtMinuti.BackColor = Color.White;
+                    return true;
+                }
             }
         }
     }

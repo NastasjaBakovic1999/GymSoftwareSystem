@@ -27,40 +27,40 @@ namespace View.ControllerV
                 }
                 else
                 {
-                    dgvRezervacije.DataSource = rezervacije;
+                    dgvRezervacije.Columns.Clear();
                     dgvRezervacije.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                    dgvRezervacije.Columns["Termin"].Visible = false;
-                    dgvRezervacije.Columns["Korisnik"].Visible = false;
 
                     dgvRezervacije.Columns.Add("Ime korisnika", "Ime korisnika");
                     dgvRezervacije.Columns.Add("Prezime korisnika", "Prezime korisnika");
                     dgvRezervacije.Columns.Add("Datum termina", "Datum termina");
                     dgvRezervacije.Columns.Add("Vreme termina", "Vreme termina");
                     dgvRezervacije.Columns.Add("Rezervisana usluga", "Rezervisana usluga");
+                    dgvRezervacije.Columns.Add("KorisnikId", "KorisnikId");
+                    dgvRezervacije.Columns.Add("TerminId", "TerminId");
+                    
+                    dgvRezervacije.Columns["KorisnikId"].Visible = false;
+                    dgvRezervacije.Columns["TerminId"].Visible = false;
 
-                    foreach(Rezervacija r in rezervacije)
+                    foreach (Rezervacija r in rezervacije)
                     {
                         DataGridViewRow row = new DataGridViewRow();
                         row.CreateCells(dgvRezervacije);
                         row.Cells[0].Value = r.Korisnik.Ime;
                         row.Cells[1].Value = r.Korisnik.Prezime;
-                        row.Cells[2].Value = r.Termin.Datum;
-                        row.Cells[3].Value = r.Termin.Vreme;
+                        row.Cells[2].Value = r.Termin.Datum.ToString("dd'.'MM'.'yyyy");
+                        row.Cells[3].Value = r.Termin.Vreme.ToString(@"hh\:mm");
                         row.Cells[4].Value = r.Termin.Usluga.Naziv;
+                        row.Cells[5].Value = r.Korisnik.KorisnikId;
+                        row.Cells[6].Value = r.Termin.TerminId;
                         dgvRezervacije.Rows.Add(row);
                     }
 
-                    //dgvRezervacije.Columns["KorisnikId"].Visible = false;
-                    //dgvRezervacije.Columns["TerminId"].Visible = false;
 
-                    //dgvTermini.Columns["Usluga"].HeaderText = "Usluga - Trener";
-
-                    //dgvTermini.Columns["Datum"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    //dgvTermini.Columns["Vreme"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    //dgvTermini.Columns["Kapacitet"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    //dgvTermini.Columns["Usluga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    //dgvTermini.Columns["Sala"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dgvRezervacije.Columns["Ime korisnika"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dgvRezervacije.Columns["Prezime korisnika"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dgvRezervacije.Columns["Datum termina"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dgvRezervacije.Columns["Vreme termina"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dgvRezervacije.Columns["Rezervisana usluga"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
             catch (NullReferenceException ex)
@@ -78,7 +78,17 @@ namespace View.ControllerV
             }
 
             DataGridViewRow red = dgvRezervacije.SelectedRows[0];
-            Rezervacija rezervacija = (Rezervacija)red.DataBoundItem;
+            Rezervacija rezervacija = new Rezervacija
+            {
+                Termin = new Termin
+                {
+                    TerminId = (int)red.Cells[6].Value
+                },
+                Korisnik = new Korisnik
+                {
+                    KorisnikId = (int)red.Cells[5].Value
+                }
+            };
 
             try
             {

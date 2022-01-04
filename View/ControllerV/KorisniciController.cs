@@ -33,6 +33,7 @@ namespace View.ControllerV
                     dgvKorisnici.Columns["Adresa"].Visible = false;
 
                     dgvKorisnici.Columns["DatumRodjenja"].HeaderText = "Datum rođenja";
+                    dgvKorisnici.Columns["DatumRodjenja"].DefaultCellStyle.Format = "dd.MM.yyyy";
 
                     dgvKorisnici.Columns["Ime"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     dgvKorisnici.Columns["Prezime"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -46,7 +47,7 @@ namespace View.ControllerV
             }
         }
 
-        internal void UcitajKorisnika(DataGridView dgvKorisnici, TextBox txtIme, TextBox txtPrezime, TextBox txtAdresa, TextBox txtJMBG, DateTimePicker dtpDatumRodjenja)
+        internal void UcitajKorisnika(DataGridView dgvKorisnici, TextBox txtIme, TextBox txtPrezime, TextBox txtAdresa, TextBox txtJMBG, TextBox txtDatumRodjenja)
         {
             try
             {
@@ -70,7 +71,7 @@ namespace View.ControllerV
                     txtPrezime.Text = korisnik.Prezime;
                     txtJMBG.Text = korisnik.JMBG;
                     txtAdresa.Text = korisnik.Adresa;
-                    dtpDatumRodjenja.Value = korisnik.DatumRodjenja;
+                    txtDatumRodjenja.Text = korisnik.DatumRodjenja.ToString("dd'.'MM'.'yyyy");
                 }
             }
             catch (SystemOperationException ex)
