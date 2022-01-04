@@ -13,7 +13,7 @@ namespace Domen
     {
         public int TerminId { get; set; }
         public DateTime Datum{ get; set; }
-        public DateTime Vreme { get; set; }
+        public TimeSpan Vreme { get; set; }
         public int Kapacitet { get; set; }
         public Usluga Usluga { get; set; }
         public Sala Sala { get; set; }
@@ -28,7 +28,7 @@ namespace Domen
         public string JoinTable => "join Usluga u";
 
         [Browsable(false)]
-        public string JoinCondition => $"on (t.UslugaId=u.UslugaId) join Sala s on (t.SalaId=s.SalaId)";
+        public string JoinCondition => $"on (t.UslugaId=u.UslugaId) join Sala s on (t.SalaId=s.SalaId) join Trener tren on (u.TrenerId=tren.TrenerId)";
 
         [Browsable(false)]
         public object SelectValues => "*";
@@ -40,7 +40,7 @@ namespace Domen
         public string WhereCondition => $"TerminId={TerminId}";
 
         [Browsable(false)]
-        public string InsertValues => $"'{Datum.ToShortDateString()}', '{Vreme.ToShortTimeString()}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
+        public string InsertValues => $"'{Datum.ToShortDateString()}', '{Vreme}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
 
         [Browsable(false)]
         public string GeneralCondition => "";
@@ -54,7 +54,7 @@ namespace Domen
                 {
                     TerminId = (int)reader["TerminId"],
                     Datum = (DateTime)reader["Datum"],
-                    Vreme=(DateTime)reader["Vreme"],
+                    Vreme=(TimeSpan)reader["Vreme"],
                     Kapacitet = (int)reader["Kapacitet"],
                     Usluga = new Usluga
                     {

@@ -24,6 +24,14 @@ namespace View.UserControls
         {
             InitializeComponent();
             this.rezervacijeController = rezervacijeController;
+            rezervacijeController.UcitajRezervacije(dgvRezervacije);
+        }
+
+        private void btnObrisiRezervaciju_Click(object sender, EventArgs e)
+        {
+            rezervacijeController.ObrisiRezervaciju(dgvRezervacije);
+            dgvRezervacije.DataSource = null;
+            rezervacijeController.UcitajRezervacije(dgvRezervacije);
         }
     }
 }

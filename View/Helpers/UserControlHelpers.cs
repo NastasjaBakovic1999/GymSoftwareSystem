@@ -24,9 +24,21 @@ namespace View.Helpers
             }
         }
 
+        public static bool NumberPickerValidation(NumericUpDown nud)
+        {
+            if(nud.Value < 20 | nud.Value > 100)
+            {
+                nud.BackColor = Color.LightCoral;
+                return false;
+            } else {
+                nud.BackColor = Color.White;
+                return true;
+            }
+        }
+
         public static bool DateValidation(DateTimePicker dtp)
         {
-            if (dtp.Value.Date > DateTime.Now)
+            if (dtp.Value.Date < DateTime.Now)
             {
                 dtp.BackColor = Color.LightCoral;
                 return false;

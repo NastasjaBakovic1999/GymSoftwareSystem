@@ -42,6 +42,10 @@ namespace Domen
         [Browsable(false)]
         public string GeneralCondition => "";
 
+        public override string ToString()
+        {
+            return $"{Naziv} - {Trener.Ime} {Trener.Prezime}";
+        }
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
             List<IEntity> result = new List<IEntity>();

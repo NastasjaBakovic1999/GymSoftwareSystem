@@ -76,6 +76,10 @@
             // 
             // dgvKorisnici
             // 
+            this.dgvKorisnici.AllowUserToAddRows = false;
+            this.dgvKorisnici.AllowUserToDeleteRows = false;
+            this.dgvKorisnici.AllowUserToResizeColumns = false;
+            this.dgvKorisnici.AllowUserToResizeRows = false;
             this.dgvKorisnici.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvKorisnici.BackgroundColor = System.Drawing.Color.White;
             this.dgvKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

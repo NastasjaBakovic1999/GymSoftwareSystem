@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbUnosKorisnika = new System.Windows.Forms.GroupBox();
+            this.dtpVreme = new System.Windows.Forms.DateTimePicker();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTermini = new System.Windows.Forms.DataGridView();
@@ -43,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnSacuvajTermine = new System.Windows.Forms.Button();
-            this.dtpVreme = new System.Windows.Forms.DateTimePicker();
             this.gbUnosKorisnika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKapacitet)).BeginInit();
@@ -73,6 +74,16 @@
             this.gbUnosKorisnika.TabStop = false;
             this.gbUnosKorisnika.Text = "Unos novog termina";
             // 
+            // dtpVreme
+            // 
+            this.dtpVreme.AllowDrop = true;
+            this.dtpVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpVreme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpVreme.Location = new System.Drawing.Point(768, 99);
+            this.dtpVreme.Name = "dtpVreme";
+            this.dtpVreme.Size = new System.Drawing.Size(207, 32);
+            this.dtpVreme.TabIndex = 25;
+            // 
             // btnObrisiTermin
             // 
             this.btnObrisiTermin.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -91,6 +102,7 @@
             this.btnObrisiTermin.TabIndex = 14;
             this.btnObrisiTermin.Text = "Obriši termin";
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
+            this.btnObrisiTermin.Click += new System.EventHandler(this.btnObrisiTermin_Click);
             // 
             // label3
             // 
@@ -107,7 +119,15 @@
             this.dgvTermini.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvTermini.BackgroundColor = System.Drawing.Color.White;
             this.dgvTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTermini.Location = new System.Drawing.Point(50, 261);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTermini.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTermini.Location = new System.Drawing.Point(50, 257);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
             this.dgvTermini.RowTemplate.Height = 24;
@@ -126,6 +146,7 @@
             // 
             this.dtpDatum.AllowDrop = true;
             this.dtpDatum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDatum.Location = new System.Drawing.Point(719, 46);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(256, 32);
@@ -167,6 +188,7 @@
             this.btnDodajTermin.TabIndex = 17;
             this.btnDodajTermin.Text = "Dodaj termin";
             this.btnDodajTermin.UseVisualStyleBackColor = false;
+            this.btnDodajTermin.Click += new System.EventHandler(this.btnDodajTermin_Click);
             // 
             // label2
             // 
@@ -175,9 +197,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(55, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 24);
+            this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Odaberite uslugu:";
+            this.label2.Text = "Usluga";
             // 
             // label7
             // 
@@ -205,9 +227,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(55, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 24);
+            this.label4.Size = new System.Drawing.Size(50, 24);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Odaberite salu:";
+            this.label4.Text = "Sala:";
             // 
             // btnSacuvajTermine
             // 
@@ -227,16 +249,7 @@
             this.btnSacuvajTermine.TabIndex = 25;
             this.btnSacuvajTermine.Text = "Sačuvaj termine";
             this.btnSacuvajTermine.UseVisualStyleBackColor = false;
-            // 
-            // dtpVreme
-            // 
-            this.dtpVreme.AllowDrop = true;
-            this.dtpVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpVreme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpVreme.Location = new System.Drawing.Point(829, 99);
-            this.dtpVreme.Name = "dtpVreme";
-            this.dtpVreme.Size = new System.Drawing.Size(146, 32);
-            this.dtpVreme.TabIndex = 25;
+            this.btnSacuvajTermine.Click += new System.EventHandler(this.btnSacuvajTermine_Click);
             // 
             // UCUnosTermina
             // 
@@ -246,6 +259,7 @@
             this.Controls.Add(this.btnSacuvajTermine);
             this.Controls.Add(this.gbUnosKorisnika);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCUnosTermina";
             this.Size = new System.Drawing.Size(1145, 631);

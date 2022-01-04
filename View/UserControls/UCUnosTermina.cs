@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace View.UserControls
     public partial class UCUnosTermina : UserControl
     {
         private UnosTerminaController unosTerminaController;
+        public BindingList<Termin> termini = new BindingList<Termin>();
 
         public UCUnosTermina()
         {
@@ -24,6 +26,27 @@ namespace View.UserControls
         {
             InitializeComponent();
             this.unosTerminaController = unosTerminaController;
+            unosTerminaController.UcitajUsluge(cmbUsluge);
+            unosTerminaController.UcitajSale(cmbSale);
+        }
+
+        private void btnDodajTermin_Click(object sender, EventArgs e)
+        {
+            unosTerminaController.UnesiTermin(cmbUsluge, cmbSale, nudKapacitet, dtpDatum, dtpVreme,dgvTermini, this);
+            dgvTermini.DataSource = null;
+            unosTerminaController.UcitajTermine(dgvTermini, this);
+        }
+
+        private void btnObrisiTermin_Click(object sender, EventArgs e)
+        {
+            unosTerminaController.ObrisiTermin(dgvTermini, this);
+            dgvTermini.DataSource = null;
+            unosTerminaController.UcitajTermine(dgvTermini, this);
+        }
+
+        private void btnSacuvajTermine_Click(object sender, EventArgs e)
+        {
+            unosTerminaController.SacuvajTermine(dgvTermini, this);
         }
     }
 }

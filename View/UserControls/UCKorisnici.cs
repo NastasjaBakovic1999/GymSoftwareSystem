@@ -24,7 +24,6 @@ namespace View.UserControls
         {
             InitializeComponent();
             this.korisniciController = korisniciController;
-            gbDetaljiOKorisniku.Enabled = true;
             korisniciController.UcitajKorisnike(dgvKorisnici);
         }
 

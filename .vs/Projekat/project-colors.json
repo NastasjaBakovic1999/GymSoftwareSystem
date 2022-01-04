@@ -5,7 +5,42 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "3357acc7-14f0-433d-94d9-e36b4d433cbb": {
+      "ProjectGuid": "3357acc7-14f0-433d-94d9-e36b4d433cbb",
+      "DisplayName": "DatabaseBroker",
+      "ColorIndex": 0
+    },
+    "0411e099-59e4-4f56-8742-01ca41a718cf": {
+      "ProjectGuid": "0411e099-59e4-4f56-8742-01ca41a718cf",
+      "DisplayName": "View",
+      "ColorIndex": 1
+    },
+    "bb5bad7d-509f-47c9-8974-93331b99c0f9": {
+      "ProjectGuid": "bb5bad7d-509f-47c9-8974-93331b99c0f9",
+      "DisplayName": "ControllerC",
+      "ColorIndex": 2
+    },
+    "bc6b2e20-1f54-40a6-a896-15e98d2904f8": {
+      "ProjectGuid": "bc6b2e20-1f54-40a6-a896-15e98d2904f8",
+      "DisplayName": "Domen",
+      "ColorIndex": 3
+    },
+    "9d594f9e-ed30-474d-be1c-4721aea88a86": {
+      "ProjectGuid": "9d594f9e-ed30-474d-be1c-4721aea88a86",
+      "DisplayName": "SystemOperations",
+      "ColorIndex": 4
+    },
+    "8f3e9507-b69d-4367-8c40-d7c2c8906b8a": {
+      "ProjectGuid": "8f3e9507-b69d-4367-8c40-d7c2c8906b8a",
+      "DisplayName": "Server",
+      "ColorIndex": 5
+    },
+    "849c99be-3525-4325-80b0-42e64a9b0191": {
+      "ProjectGuid": "849c99be-3525-4325-80b0-42e64a9b0191",
+      "DisplayName": "Storage",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 7
 }

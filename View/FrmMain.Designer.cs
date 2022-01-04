@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.korisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sviKorisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNovogKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sveUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminiUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sviTerminiUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNoveTermineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sveRezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNoveRezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.sviKorisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajNovogKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +68,25 @@
             this.korisniciToolStripMenuItem.Text = "Korisnici";
             this.korisniciToolStripMenuItem.Click += new System.EventHandler(this.korisniciToolStripMenuItem_Click);
             // 
+            // sviKorisniciToolStripMenuItem
+            // 
+            this.sviKorisniciToolStripMenuItem.Name = "sviKorisniciToolStripMenuItem";
+            this.sviKorisniciToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.sviKorisniciToolStripMenuItem.Text = "Svi korisnici";
+            this.sviKorisniciToolStripMenuItem.Click += new System.EventHandler(this.sviKorisniciToolStripMenuItem_Click);
+            // 
+            // dodajNovogKorisnikaToolStripMenuItem
+            // 
+            this.dodajNovogKorisnikaToolStripMenuItem.Name = "dodajNovogKorisnikaToolStripMenuItem";
+            this.dodajNovogKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.dodajNovogKorisnikaToolStripMenuItem.Text = "Dodaj novog korisnika";
+            this.dodajNovogKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogKorisnikaToolStripMenuItem_Click);
+            // 
             // uslugeToolStripMenuItem
             // 
             this.uslugeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sveUslugeToolStripMenuItem,
-            this.terminiUslugaToolStripMenuItem,
+            this.sviTerminiUslugaToolStripMenuItem,
             this.dodajNoveTermineToolStripMenuItem});
             this.uslugeToolStripMenuItem.Name = "uslugeToolStripMenuItem";
             this.uslugeToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
@@ -86,12 +100,12 @@
             this.sveUslugeToolStripMenuItem.Text = "Sve usluge";
             this.sveUslugeToolStripMenuItem.Click += new System.EventHandler(this.sveUslugeToolStripMenuItem_Click);
             // 
-            // terminiUslugaToolStripMenuItem
+            // sviTerminiUslugaToolStripMenuItem
             // 
-            this.terminiUslugaToolStripMenuItem.Name = "terminiUslugaToolStripMenuItem";
-            this.terminiUslugaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.terminiUslugaToolStripMenuItem.Text = "Termini usluga";
-            this.terminiUslugaToolStripMenuItem.Click += new System.EventHandler(this.terminiUslugaToolStripMenuItem_Click);
+            this.sviTerminiUslugaToolStripMenuItem.Name = "sviTerminiUslugaToolStripMenuItem";
+            this.sviTerminiUslugaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sviTerminiUslugaToolStripMenuItem.Text = "Svi termini usluga";
+            this.sviTerminiUslugaToolStripMenuItem.Click += new System.EventHandler(this.sviTerminiUslugaToolStripMenuItem_Click);
             // 
             // dodajNoveTermineToolStripMenuItem
             // 
@@ -133,20 +147,6 @@
             this.pnlMain.Size = new System.Drawing.Size(1145, 631);
             this.pnlMain.TabIndex = 1;
             // 
-            // sviKorisniciToolStripMenuItem
-            // 
-            this.sviKorisniciToolStripMenuItem.Name = "sviKorisniciToolStripMenuItem";
-            this.sviKorisniciToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
-            this.sviKorisniciToolStripMenuItem.Text = "Svi korisnici";
-            this.sviKorisniciToolStripMenuItem.Click += new System.EventHandler(this.sviKorisniciToolStripMenuItem_Click);
-            // 
-            // dodajNovogKorisnikaToolStripMenuItem
-            // 
-            this.dodajNovogKorisnikaToolStripMenuItem.Name = "dodajNovogKorisnikaToolStripMenuItem";
-            this.dodajNovogKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
-            this.dodajNovogKorisnikaToolStripMenuItem.Text = "Dodaj novog korisnika";
-            this.dodajNovogKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogKorisnikaToolStripMenuItem_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -177,11 +177,11 @@
         private System.Windows.Forms.ToolStripMenuItem rezervacijeToolStripMenuItem;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolStripMenuItem sveUslugeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem terminiUslugaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNoveTermineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sveRezervacijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNoveRezervacijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sviKorisniciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovogKorisnikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sviTerminiUslugaToolStripMenuItem;
     }
 }

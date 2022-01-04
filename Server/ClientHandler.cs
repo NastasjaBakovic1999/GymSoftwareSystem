@@ -86,7 +86,7 @@ namespace Server
                     response.Result = Controller.Instance.PretraziKorisnike((Korisnik)request.RequestObject);
                     break;
                 case Operation.UcitajKorisnika:
-                    Controller.Instance.UcitajKorisnika((Korisnik)request.RequestObject);
+                    response.Result = Controller.Instance.UcitajKorisnika((Korisnik)request.RequestObject);
                     break;
                 case Operation.UnesiKorisnika:
                     Controller.Instance.UnesiKorisnika((Korisnik)request.RequestObject);

@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
-            this.dgvSveRezervacije = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveRezervacije)).BeginInit();
+            this.dgvTermini = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,33 +65,37 @@
             this.btnObrisiTermin.TabIndex = 13;
             this.btnObrisiTermin.Text = "Obriši termin";
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
+            this.btnObrisiTermin.Click += new System.EventHandler(this.btnObrisiTermin_Click);
             // 
-            // dgvSveRezervacije
+            // dgvTermini
             // 
-            this.dgvSveRezervacije.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvSveRezervacije.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSveRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSveRezervacije.Location = new System.Drawing.Point(51, 96);
-            this.dgvSveRezervacije.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvSveRezervacije.Name = "dgvSveRezervacije";
-            this.dgvSveRezervacije.RowHeadersWidth = 51;
-            this.dgvSveRezervacije.RowTemplate.Height = 24;
-            this.dgvSveRezervacije.Size = new System.Drawing.Size(1038, 428);
-            this.dgvSveRezervacije.TabIndex = 12;
+            this.dgvTermini.AllowUserToAddRows = false;
+            this.dgvTermini.AllowUserToDeleteRows = false;
+            this.dgvTermini.AllowUserToResizeColumns = false;
+            this.dgvTermini.AllowUserToResizeRows = false;
+            this.dgvTermini.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTermini.Location = new System.Drawing.Point(51, 89);
+            this.dgvTermini.Name = "dgvTermini";
+            this.dgvTermini.RowHeadersWidth = 51;
+            this.dgvTermini.RowTemplate.Height = 24;
+            this.dgvTermini.Size = new System.Drawing.Size(1038, 435);
+            this.dgvTermini.TabIndex = 15;
             // 
             // UCTermini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.dgvTermini);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObrisiTermin);
-            this.Controls.Add(this.dgvSveRezervacije);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCTermini";
             this.Size = new System.Drawing.Size(1145, 631);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveRezervacije)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,6 +105,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnObrisiTermin;
-        private System.Windows.Forms.DataGridView dgvSveRezervacije;
+        private System.Windows.Forms.DataGridView dgvTermini;
     }
 }

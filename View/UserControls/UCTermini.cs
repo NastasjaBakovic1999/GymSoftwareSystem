@@ -24,6 +24,14 @@ namespace View.UserControls
         {
             InitializeComponent();
             this.terminiController = terminiController;
+            terminiController.UcitajTermine(dgvTermini);
+        }
+
+        private void btnObrisiTermin_Click(object sender, EventArgs e)
+        {
+            terminiController.ObrisiTermin(dgvTermini);
+            dgvTermini.DataSource = null;
+            terminiController.UcitajTermine(dgvTermini);
         }
     }
 }

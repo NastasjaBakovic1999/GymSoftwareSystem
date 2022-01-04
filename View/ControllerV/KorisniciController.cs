@@ -18,9 +18,7 @@ namespace View.ControllerV
             {
                 BindingList<Korisnik> korisnici = new BindingList<Korisnik>(Communication.Instance.UcitajKorisnike());
 
-                dgvKorisnici.DataSource = korisnici;
-
-                if (korisnici == null || korisnici.Count == 0)
+                if (korisnici == null | korisnici.Count == 0)
                 {
                     MessageBox.Show("Trenutno nema unetih korisnika.");
                     dgvKorisnici.DataSource = null;
@@ -48,6 +46,39 @@ namespace View.ControllerV
             }
         }
 
+        internal void UcitajKorisnika(DataGridView dgvKorisnici, TextBox txtIme, TextBox txtPrezime, TextBox txtAdresa, TextBox txtJMBG, DateTimePicker dtpDatumRodjenja)
+        {
+            try
+            {
+                DataGridViewRow selectedRow = dgvKorisnici.SelectedRows[0];
+
+                Korisnik korisnik = new Korisnik
+                {
+                    Uslov = $"k.KorisnikId={((Korisnik)selectedRow.DataBoundItem).KorisnikId}"
+                };
+
+                korisnik = Communication.Instance.UcitajKorisnika(korisnik);
+
+                if (korisnik == null)
+                {
+                    MessageBox.Show("Nije moguće učitati korisnika");
+                    return;
+                }
+                else
+                {
+                    txtIme.Text = korisnik.Ime;
+                    txtPrezime.Text = korisnik.Prezime;
+                    txtJMBG.Text = korisnik.JMBG;
+                    txtAdresa.Text = korisnik.Adresa;
+                    dtpDatumRodjenja.Value = korisnik.DatumRodjenja;
+                }
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         internal void ObrisiKorisnika(DataGridView dgvKorisnici)
         {
             if (dgvKorisnici.SelectedRows.Count == 0)
@@ -62,19 +93,19 @@ namespace View.ControllerV
             try
             {
                 Communication.Instance.ObrisiKorisnika(korisnik);
-                MessageBox.Show("Sistem je izbrisao odabranog gosta!");
+                MessageBox.Show("Sistem je izbrisao odabranog korisnika!");
             }
             catch (SystemOperationException ex)
             {
-                MessageBox.Show("Sistem ne može da izbriše odabranog gosta.\n" + ex.Message);
+                MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
             }
             catch (ServerException ex)
             {
-                MessageBox.Show("Sistem ne može da izbriše odabranog gosta..\n" + ex.Message);
+                MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Sistem ne može da izbriše odabranog gosta..\n" + ex.Message);
+                MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
             }
         }
 

@@ -28,24 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvSveRezervacije = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvRezervacije = new System.Windows.Forms.DataGridView();
             this.btnObrisiRezervaciju = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveRezervacije)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvSveRezervacije
+            // dgvRezervacije
             // 
-            this.dgvSveRezervacije.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvSveRezervacije.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSveRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSveRezervacije.Location = new System.Drawing.Point(47, 101);
-            this.dgvSveRezervacije.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvSveRezervacije.Name = "dgvSveRezervacije";
-            this.dgvSveRezervacije.RowHeadersWidth = 51;
-            this.dgvSveRezervacije.RowTemplate.Height = 24;
-            this.dgvSveRezervacije.Size = new System.Drawing.Size(1038, 428);
-            this.dgvSveRezervacije.TabIndex = 0;
+            this.dgvRezervacije.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvRezervacije.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRezervacije.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRezervacije.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRezervacije.Location = new System.Drawing.Point(47, 101);
+            this.dgvRezervacije.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvRezervacije.Name = "dgvRezervacije";
+            this.dgvRezervacije.RowHeadersWidth = 51;
+            this.dgvRezervacije.RowTemplate.Height = 24;
+            this.dgvRezervacije.Size = new System.Drawing.Size(1038, 428);
+            this.dgvRezervacije.TabIndex = 0;
             // 
             // btnObrisiRezervaciju
             // 
@@ -60,12 +78,13 @@
             this.btnObrisiRezervaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnObrisiRezervaciju.ForeColor = System.Drawing.Color.White;
             this.btnObrisiRezervaciju.Location = new System.Drawing.Point(878, 553);
-            this.btnObrisiRezervaciju.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObrisiRezervaciju.Margin = new System.Windows.Forms.Padding(4);
             this.btnObrisiRezervaciju.Name = "btnObrisiRezervaciju";
             this.btnObrisiRezervaciju.Size = new System.Drawing.Size(207, 43);
             this.btnObrisiRezervaciju.TabIndex = 10;
             this.btnObrisiRezervaciju.Text = "Obriši rezervaciju";
             this.btnObrisiRezervaciju.UseVisualStyleBackColor = false;
+            this.btnObrisiRezervaciju.Click += new System.EventHandler(this.btnObrisiRezervaciju_Click);
             // 
             // label1
             // 
@@ -86,12 +105,12 @@
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObrisiRezervaciju);
-            this.Controls.Add(this.dgvSveRezervacije);
+            this.Controls.Add(this.dgvRezervacije);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCRezervacije";
             this.Size = new System.Drawing.Size(1145, 631);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveRezervacije)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +118,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvSveRezervacije;
+        private System.Windows.Forms.DataGridView dgvRezervacije;
         private System.Windows.Forms.Button btnObrisiRezervaciju;
         private System.Windows.Forms.Label label1;
     }

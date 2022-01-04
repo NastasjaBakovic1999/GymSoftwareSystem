@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSacuvajKorisnika = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.dtpDatumRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDatumRodjenja.Location = new System.Drawing.Point(193, 316);
-            this.dtpDatumRodjenja.MaxDate = new System.DateTime(2021, 12, 30, 0, 0, 0, 0);
+            this.dtpDatumRodjenja.MaxDate = new System.DateTime(7999, 12, 30, 0, 0, 0, 0);
             this.dtpDatumRodjenja.Name = "dtpDatumRodjenja";
             this.dtpDatumRodjenja.Size = new System.Drawing.Size(295, 32);
             this.dtpDatumRodjenja.TabIndex = 10;
@@ -172,11 +173,23 @@
             this.btnSacuvajKorisnika.UseVisualStyleBackColor = false;
             this.btnSacuvajKorisnika.Click += new System.EventHandler(this.btnSacuvajKorisnika_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(39, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(274, 35);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Unos novog korisnika";
+            // 
             // UCUnosKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dtpDatumRodjenja);
             this.Controls.Add(this.btnSacuvajKorisnika);
@@ -212,5 +225,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

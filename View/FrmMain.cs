@@ -83,5 +83,10 @@ namespace View
         {
             mainController.OpenUCUnosKorisnika(this);
         }
+
+        private void sviTerminiUslugaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainController.OpenUCTermini(this);
+        }
     }
 }

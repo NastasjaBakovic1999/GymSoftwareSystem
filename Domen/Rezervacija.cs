@@ -24,7 +24,7 @@ namespace Domen
         public string JoinTable => "join Korisnik k";
 
         [Browsable(false)]
-        public string JoinCondition => "on (r.KorisnikId=k.KorisnikId) join Termin t on (r.TerminId=t.TerminId)";
+        public string JoinCondition => "on (r.KorisnikId=k.KorisnikId) join Termin t on (r.TerminId=t.TerminId) left join Usluga u on (t.UslugaId=u.UslugaId)";
 
         [Browsable(false)]
         public string WhereCondition => $"KorisnikId = {Korisnik.KorisnikId} and TerminId = {Termin.TerminId}";
@@ -51,7 +51,7 @@ namespace Domen
                 {
                     Korisnik = new Korisnik
                     {
-                        KorisnikId = (int)reader["KorisniId"],
+                        KorisnikId = (int)reader["KorisnikId"],
                         JMBG = (string)reader["JMBG"],
                         Ime = (string)reader["Ime"],
                         Prezime = (string)reader["Prezime"],
@@ -62,23 +62,12 @@ namespace Domen
                     {
                         TerminId = (int)reader["TerminId"],
                         Datum = (DateTime)reader["Datum"],
-                        Vreme = (DateTime)reader["Vreme"],
+                        Vreme = (TimeSpan)reader["Vreme"],
                         Kapacitet = (int)reader["Kapacitet"],
                         Usluga = new Usluga
                         {
                             UslugaId = (int)reader["UslugaId"],
-                            Naziv = (string)reader["Naziv"],
-                            Trener = new Trener
-                            {
-                                TrenerId = (int)reader["TrenerId"],
-                                Ime = (string)reader["Ime"],
-                                Prezime = (string)reader["Prezime"]
-                            }
-                        },
-                        Sala = new Sala
-                        {
-                            SalaId = (int)reader["SalaId"],
-                            BrojSale = (string)reader["BrojSale"],
+                            Naziv = (string)reader["Naziv"]
                         }
                     }
                 });

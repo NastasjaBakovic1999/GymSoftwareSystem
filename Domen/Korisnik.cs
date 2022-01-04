@@ -48,6 +48,10 @@ namespace Domen
         [Browsable(false)]
         public string GeneralCondition => $"{Uslov}";
 
+        //public override string ToString()
+        //{
+        //    return ;
+        //}
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
             List<IEntity> result = new List<IEntity>();

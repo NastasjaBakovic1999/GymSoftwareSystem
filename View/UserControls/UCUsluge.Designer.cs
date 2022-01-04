@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvSveUsluge = new System.Windows.Forms.DataGridView();
+            this.dgvUsluge = new System.Windows.Forms.DataGridView();
             this.gbUnosUsluge = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNazivUsluge = new System.Windows.Forms.TextBox();
-            this.cmbTrener = new System.Windows.Forms.ComboBox();
             this.btnSacuvajUslugu = new System.Windows.Forms.Button();
+            this.cmbTrener = new System.Windows.Forms.ComboBox();
+            this.txtNazivUsluge = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnObrisiUslugu = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveUsluge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).BeginInit();
             this.gbUnosUsluge.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,17 +54,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usluge";
             // 
-            // dgvSveUsluge
+            // dgvUsluge
             // 
-            this.dgvSveUsluge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvSveUsluge.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSveUsluge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSveUsluge.Location = new System.Drawing.Point(43, 357);
-            this.dgvSveUsluge.Name = "dgvSveUsluge";
-            this.dgvSveUsluge.RowHeadersWidth = 51;
-            this.dgvSveUsluge.RowTemplate.Height = 24;
-            this.dgvSveUsluge.Size = new System.Drawing.Size(837, 230);
-            this.dgvSveUsluge.TabIndex = 1;
+            this.dgvUsluge.AllowUserToAddRows = false;
+            this.dgvUsluge.AllowUserToDeleteRows = false;
+            this.dgvUsluge.AllowUserToResizeColumns = false;
+            this.dgvUsluge.AllowUserToResizeRows = false;
+            this.dgvUsluge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvUsluge.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUsluge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsluge.Location = new System.Drawing.Point(30, 104);
+            this.dgvUsluge.Name = "dgvUsluge";
+            this.dgvUsluge.RowHeadersWidth = 51;
+            this.dgvUsluge.RowTemplate.Height = 24;
+            this.dgvUsluge.Size = new System.Drawing.Size(512, 433);
+            this.dgvUsluge.TabIndex = 1;
             // 
             // gbUnosUsluge
             // 
@@ -75,49 +79,12 @@
             this.gbUnosUsluge.Controls.Add(this.label3);
             this.gbUnosUsluge.Controls.Add(this.label2);
             this.gbUnosUsluge.ForeColor = System.Drawing.Color.White;
-            this.gbUnosUsluge.Location = new System.Drawing.Point(43, 78);
+            this.gbUnosUsluge.Location = new System.Drawing.Point(582, 95);
             this.gbUnosUsluge.Name = "gbUnosUsluge";
-            this.gbUnosUsluge.Size = new System.Drawing.Size(711, 255);
+            this.gbUnosUsluge.Size = new System.Drawing.Size(541, 386);
             this.gbUnosUsluge.TabIndex = 3;
             this.gbUnosUsluge.TabStop = false;
             this.gbUnosUsluge.Text = "Unos nove usluge";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Naziv usluge:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 24);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Odaberi trenera:";
-            // 
-            // txtNazivUsluge
-            // 
-            this.txtNazivUsluge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNazivUsluge.Location = new System.Drawing.Point(289, 75);
-            this.txtNazivUsluge.Name = "txtNazivUsluge";
-            this.txtNazivUsluge.Size = new System.Drawing.Size(351, 32);
-            this.txtNazivUsluge.TabIndex = 2;
-            // 
-            // cmbTrener
-            // 
-            this.cmbTrener.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbTrener.FormattingEnabled = true;
-            this.cmbTrener.Location = new System.Drawing.Point(289, 129);
-            this.cmbTrener.Name = "cmbTrener";
-            this.cmbTrener.Size = new System.Drawing.Size(351, 32);
-            this.cmbTrener.TabIndex = 3;
             // 
             // btnSacuvajUslugu
             // 
@@ -130,12 +97,50 @@
             this.btnSacuvajUslugu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSacuvajUslugu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSacuvajUslugu.ForeColor = System.Drawing.Color.White;
-            this.btnSacuvajUslugu.Location = new System.Drawing.Point(433, 180);
+            this.btnSacuvajUslugu.Location = new System.Drawing.Point(309, 235);
             this.btnSacuvajUslugu.Name = "btnSacuvajUslugu";
             this.btnSacuvajUslugu.Size = new System.Drawing.Size(207, 43);
             this.btnSacuvajUslugu.TabIndex = 4;
             this.btnSacuvajUslugu.Text = "Sačuvaj uslugu";
             this.btnSacuvajUslugu.UseVisualStyleBackColor = true;
+            this.btnSacuvajUslugu.Click += new System.EventHandler(this.btnSacuvajUslugu_Click);
+            // 
+            // cmbTrener
+            // 
+            this.cmbTrener.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbTrener.FormattingEnabled = true;
+            this.cmbTrener.Location = new System.Drawing.Point(206, 173);
+            this.cmbTrener.Name = "cmbTrener";
+            this.cmbTrener.Size = new System.Drawing.Size(310, 32);
+            this.cmbTrener.TabIndex = 3;
+            // 
+            // txtNazivUsluge
+            // 
+            this.txtNazivUsluge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNazivUsluge.Location = new System.Drawing.Point(186, 111);
+            this.txtNazivUsluge.Name = "txtNazivUsluge";
+            this.txtNazivUsluge.Size = new System.Drawing.Size(330, 32);
+            this.txtNazivUsluge.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 24);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Trener:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Naziv usluge:";
             // 
             // btnObrisiUslugu
             // 
@@ -148,12 +153,13 @@
             this.btnObrisiUslugu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnObrisiUslugu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnObrisiUslugu.ForeColor = System.Drawing.Color.White;
-            this.btnObrisiUslugu.Location = new System.Drawing.Point(909, 544);
+            this.btnObrisiUslugu.Location = new System.Drawing.Point(582, 494);
             this.btnObrisiUslugu.Name = "btnObrisiUslugu";
             this.btnObrisiUslugu.Size = new System.Drawing.Size(207, 43);
             this.btnObrisiUslugu.TabIndex = 2;
             this.btnObrisiUslugu.Text = "Obriši uslugu";
             this.btnObrisiUslugu.UseVisualStyleBackColor = true;
+            this.btnObrisiUslugu.Click += new System.EventHandler(this.btnObrisiUslugu_Click);
             // 
             // UCUsluge
             // 
@@ -162,13 +168,14 @@
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.gbUnosUsluge);
             this.Controls.Add(this.btnObrisiUslugu);
-            this.Controls.Add(this.dgvSveUsluge);
+            this.Controls.Add(this.dgvUsluge);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCUsluge";
             this.Size = new System.Drawing.Size(1145, 631);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSveUsluge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsluge)).EndInit();
             this.gbUnosUsluge.ResumeLayout(false);
             this.gbUnosUsluge.PerformLayout();
             this.ResumeLayout(false);
@@ -179,7 +186,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSveUsluge;
+        private System.Windows.Forms.DataGridView dgvUsluge;
         private System.Windows.Forms.Button btnObrisiUslugu;
         private System.Windows.Forms.GroupBox gbUnosUsluge;
         private System.Windows.Forms.Label label3;

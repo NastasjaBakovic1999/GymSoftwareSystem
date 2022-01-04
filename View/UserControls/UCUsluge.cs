@@ -24,6 +24,22 @@ namespace View.UserControls
         {
             InitializeComponent();
             this.uslugeController = uslugeController;
+            uslugeController.UcitajUsluge(dgvUsluge);
+            uslugeController.UcitajTrenere(cmbTrener);
+        }
+
+        private void btnSacuvajUslugu_Click(object sender, EventArgs e)
+        {
+            uslugeController.SacuvajUslugu(txtNazivUsluge, cmbTrener);
+            dgvUsluge.DataSource = null;
+            uslugeController.UcitajUsluge(dgvUsluge);
+        }
+
+        private void btnObrisiUslugu_Click(object sender, EventArgs e)
+        {
+            uslugeController.ObrisiUslugu(dgvUsluge);
+            dgvUsluge.DataSource = null;
+            uslugeController.UcitajUsluge(dgvUsluge);
         }
     }
 }

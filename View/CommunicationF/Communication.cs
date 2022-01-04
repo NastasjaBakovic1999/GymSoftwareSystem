@@ -69,7 +69,7 @@ namespace View.CommunicationF
             klijent.GetResponseResult();
         }
 
-        internal void ObrisiReervaciju(Rezervacija r)
+        internal void ObrisiRezervaciju(Rezervacija r)
         {
             Request request = new Request
             {
