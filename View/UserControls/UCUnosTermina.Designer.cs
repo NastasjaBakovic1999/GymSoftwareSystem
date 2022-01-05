@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbUnosKorisnika = new System.Windows.Forms.GroupBox();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSati = new System.Windows.Forms.TextBox();
+            this.txtMinuti = new System.Windows.Forms.TextBox();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvTermini = new System.Windows.Forms.DataGridView();
@@ -42,10 +47,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnSacuvajTermine = new System.Windows.Forms.Button();
-            this.txtMinuti = new System.Windows.Forms.TextBox();
-            this.txtSati = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.gbUnosKorisnika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKapacitet)).BeginInit();
@@ -76,6 +77,46 @@
             this.gbUnosKorisnika.TabIndex = 16;
             this.gbUnosKorisnika.TabStop = false;
             this.gbUnosKorisnika.Text = "Unos novog termina";
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.CustomFormat = "dd.MM.yyyy";
+            this.dtpDatum.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDatum.Location = new System.Drawing.Point(655, 46);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(320, 32);
+            this.dtpDatum.TabIndex = 33;
+            this.dtpDatum.Value = new System.DateTime(2022, 1, 4, 0, 0, 0, 0);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(910, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 35);
+            this.label8.TabIndex = 32;
+            this.label8.Text = ":";
+            // 
+            // txtSati
+            // 
+            this.txtSati.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSati.Location = new System.Drawing.Point(867, 93);
+            this.txtSati.MaxLength = 2;
+            this.txtSati.Name = "txtSati";
+            this.txtSati.Size = new System.Drawing.Size(37, 32);
+            this.txtSati.TabIndex = 31;
+            // 
+            // txtMinuti
+            // 
+            this.txtMinuti.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMinuti.Location = new System.Drawing.Point(938, 93);
+            this.txtMinuti.MaxLength = 2;
+            this.txtMinuti.Name = "txtMinuti";
+            this.txtMinuti.Size = new System.Drawing.Size(37, 32);
+            this.txtMinuti.TabIndex = 30;
             // 
             // btnObrisiTermin
             // 
@@ -115,6 +156,8 @@
             this.dgvTermini.Location = new System.Drawing.Point(50, 257);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvTermini.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTermini.RowTemplate.Height = 24;
             this.dgvTermini.Size = new System.Drawing.Size(925, 169);
             this.dgvTermini.TabIndex = 11;
@@ -225,46 +268,6 @@
             this.btnSacuvajTermine.Text = "Sačuvaj termine";
             this.btnSacuvajTermine.UseVisualStyleBackColor = false;
             this.btnSacuvajTermine.Click += new System.EventHandler(this.btnSacuvajTermine_Click);
-            // 
-            // txtMinuti
-            // 
-            this.txtMinuti.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMinuti.Location = new System.Drawing.Point(938, 93);
-            this.txtMinuti.MaxLength = 2;
-            this.txtMinuti.Name = "txtMinuti";
-            this.txtMinuti.Size = new System.Drawing.Size(37, 32);
-            this.txtMinuti.TabIndex = 30;
-            // 
-            // txtSati
-            // 
-            this.txtSati.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSati.Location = new System.Drawing.Point(867, 93);
-            this.txtSati.MaxLength = 2;
-            this.txtSati.Name = "txtSati";
-            this.txtSati.Size = new System.Drawing.Size(37, 32);
-            this.txtSati.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(910, 92);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 35);
-            this.label8.TabIndex = 32;
-            this.label8.Text = ":";
-            // 
-            // dtpDatum
-            // 
-            this.dtpDatum.CustomFormat = "dd.MM.yyyy";
-            this.dtpDatum.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDatum.Location = new System.Drawing.Point(655, 46);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(320, 32);
-            this.dtpDatum.TabIndex = 33;
-            this.dtpDatum.Value = new System.DateTime(2022, 1, 4, 0, 0, 0, 0);
             // 
             // UCUnosTermina
             // 

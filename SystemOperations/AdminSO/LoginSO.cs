@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SystemOperations.AdminSO
 {
-    public class LoginSO : SystemOperationBase
+    public class PrijaviAdministratora : SystemOperationBase
     {   
         public Administrator Result { get; private set; }
         protected override void ExecuteOperation(IEntity entity)

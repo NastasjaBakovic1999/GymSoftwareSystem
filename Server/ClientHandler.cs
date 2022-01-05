@@ -127,9 +127,9 @@ namespace Server
                         {
                             ulogovaniAdmin = a;
                             admini.Add(ulogovaniAdmin);
+                            response.Result = a;
                         }
                     }
-                    response.Result = a;
                     break;
             }
             return response;

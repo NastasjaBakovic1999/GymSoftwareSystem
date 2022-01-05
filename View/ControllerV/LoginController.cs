@@ -42,7 +42,7 @@ namespace View.ControllerV
                 if (admin != null)
                 {
                     MainCoordinator.Instance.Administrator = admin;
-                    MessageBox.Show("Uspesna prijava!");
+                    MessageBox.Show("Uspešna prijava!");
                     MainCoordinator.Instance.OpenMainForm();
                     frmLogin.Dispose();
                 }

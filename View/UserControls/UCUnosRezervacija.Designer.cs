@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnObrisiRezervaciju = new System.Windows.Forms.Button();
@@ -71,6 +72,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRezervacije.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRezervacije.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvRezervacije.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRezervacije.RowTemplate.Height = 24;
             this.dgvRezervacije.Size = new System.Drawing.Size(940, 166);
             this.dgvRezervacije.TabIndex = 1;

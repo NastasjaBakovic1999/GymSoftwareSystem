@@ -46,7 +46,7 @@ namespace View.ControllerV
 
                 if (Communication.Instance.UcitajKorisnike().Any(kor=>kor.JMBG==korisnik.JMBG))
                 {
-                    MessageBox.Show("Sistem ne može da unese korisnika koji već postoji u bazi korisnika! (Korisnik sa istim JMBG se već nalazi u bazi)");
+                    MessageBox.Show("Sistem ne može da zapamti korisnika! (Korisnik sa istim JMBG se već nalazi u bazi)");
                     return;
                 }
 

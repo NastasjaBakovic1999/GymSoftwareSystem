@@ -8,7 +8,7 @@ namespace View.Exceptions
 {
     public class SystemNotFoundException:Exception
     {
-        public SystemNotFoundException() : base("Uneto korisnicko ime ne postoji i/ili ste uneli pogresnu sifru")
+        public SystemNotFoundException() : base("Uneto korisničko ime ili šifra nisu ispravni ili je admin već ulogovan!")
         {
 
         }

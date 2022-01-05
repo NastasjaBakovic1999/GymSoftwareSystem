@@ -42,7 +42,7 @@ namespace ControllerC
 
         public Administrator Login(Administrator admin)
         {
-            LoginSO so = new LoginSO();
+            PrijaviAdministratora so = new PrijaviAdministratora();
             so.ExecuteTemplate(admin);
             return so.Result;
         } 

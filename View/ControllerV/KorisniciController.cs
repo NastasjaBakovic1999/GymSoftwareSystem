@@ -72,6 +72,8 @@ namespace View.ControllerV
                     txtJMBG.Text = korisnik.JMBG;
                     txtAdresa.Text = korisnik.Adresa;
                     txtDatumRodjenja.Text = korisnik.DatumRodjenja.ToString("dd'.'MM'.'yyyy");
+
+                    MessageBox.Show("Sistem je učitao odabranog korisnika!");
                 }
             }
             catch (SystemOperationException ex)
@@ -129,7 +131,7 @@ namespace View.ControllerV
 
                 if(korisnici == null || korisnici.Count == 0)
                 {
-                    MessageBox.Show("Ne postoje korisnici koji odgovaraju unetim vrednosima");
+                    MessageBox.Show("Sistem ne može da nađe korisnike po zadatoj vrednosti!");
                     txtPretraga.Text = "";
                 } else
                 {
@@ -138,6 +140,8 @@ namespace View.ControllerV
                     dgvKorisnici.Columns["KorisnikId"].Visible = false;
                     dgvKorisnici.Columns["JMBG"].Visible = false;
                     dgvKorisnici.Columns["JMBG"].Visible = false;
+
+                    MessageBox.Show("Sistem je našao korisnike po zadatoj vrednosti!");
 
                     txtPretraga.Text = "";
                 }
