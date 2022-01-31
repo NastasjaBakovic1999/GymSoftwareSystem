@@ -45,6 +45,11 @@ namespace View.ControllerV
             {
                 MessageBox.Show(ex.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sistem ne može da učita korisnike.\n" + ex.Message);
+
+            }
         }
 
         internal void UcitajKorisnika(DataGridView dgvKorisnici, TextBox txtIme, TextBox txtPrezime, TextBox txtAdresa, TextBox txtJMBG, TextBox txtDatumRodjenja)
@@ -80,6 +85,10 @@ namespace View.ControllerV
             {
                 MessageBox.Show(ex.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sistem ne može da učita korisnika.\n" + ex.Message);
+            }
         }
 
         internal void ObrisiKorisnika(DataGridView dgvKorisnici)
@@ -102,13 +111,10 @@ namespace View.ControllerV
             {
                 MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
             }
-            catch (ServerException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Sistem ne može da izbriše odabranog korisnika.\n" + ex.Message);
+                
             }
         }
 
@@ -149,6 +155,10 @@ namespace View.ControllerV
             catch(NullReferenceException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sistem ne može da pretraži korisnike.\n" + ex.Message);
             }
         }
 

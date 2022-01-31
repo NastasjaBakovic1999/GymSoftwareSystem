@@ -46,7 +46,7 @@ namespace View.UserControls
 
         private void btnSacuvajRezervacije_Click(object sender, EventArgs e)
         {
-            unosRezervacijaController.SacuvajRezervacije(dgvRezervacije, this);
+            unosRezervacijaController.SacuvajRezervacije(dgvRezervacije, this, cmbKorisnici, cmbTermini);
         }
     }
 }

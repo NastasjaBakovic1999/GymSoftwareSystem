@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace View.Exceptions
 {
-    public class SystemOperationException:Exception
+    internal class SystemOperationException: Exception
     {
-        public SystemOperationException() : base("Server ne moze da izvrsi zahtev!")
+        public SystemOperationException() : base("Sistem ne može da izvrši operaciju.")
         {
+
         }
 
         public SystemOperationException(string message) : base(message)

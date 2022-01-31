@@ -18,6 +18,7 @@ namespace View.UserControls
         public UCUnosKorisnika()
         {
             InitializeComponent();
+            dtpDatumRodjenja.Value = DateTime.Today.Date;
         }
 
         public UCUnosKorisnika(UnosKorisnikaController unosKorisnikaKontroler)

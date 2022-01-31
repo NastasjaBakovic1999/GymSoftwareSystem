@@ -20,6 +20,7 @@ namespace View.UserControls
         public UCUnosTermina()
         {
             InitializeComponent();
+            dtpDatum.Value = DateTime.Today.Date;
         }
 
         public UCUnosTermina(UnosTerminaController unosTerminaController)
@@ -28,6 +29,7 @@ namespace View.UserControls
             this.unosTerminaController = unosTerminaController;
             unosTerminaController.UcitajUsluge(cmbUsluge);
             unosTerminaController.UcitajSale(cmbSale);
+            dtpDatum.Value = DateTime.Today.Date;
         }
 
         private void btnDodajTermin_Click(object sender, EventArgs e)

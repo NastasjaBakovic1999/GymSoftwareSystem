@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.CommunicationF;
@@ -52,6 +53,34 @@ namespace View.Helpers
             }
         }
 
+        internal static bool JMBGNumberValidation(TextBox txt)
+        {
+            if (!Regex.IsMatch(txt.Text, "^[0-9]*$"))
+            {
+                txt.BackColor = Color.LightCoral;
+                return false;
+            }
+            else
+            {
+                txt.BackColor = Color.White;
+                return true;
+            }
+        }
+
+        public static bool BirthayDateValidation(DateTimePicker dtp)
+        {
+            if (dtp.Value.Date > DateTime.Today)
+            {
+                dtp.BackColor = Color.LightCoral;
+                return false;
+            }
+            else
+            {
+                dtp.BackColor = Color.White;
+                return true;
+            }
+        }
+
         public static bool ComboBoxValidation(ComboBox cmb)
         {
             if (cmb.SelectedIndex == -1)
@@ -68,7 +97,7 @@ namespace View.Helpers
 
      
 
-        public static bool JMBGValidation(TextBox txt)
+        public static bool JMBGLengthValidation(TextBox txt)
         {
             if (txt.TextLength < 13)
             {

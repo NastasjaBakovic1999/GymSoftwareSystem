@@ -204,7 +204,7 @@
             // txtAdresa
             // 
             this.txtAdresa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAdresa.Location = new System.Drawing.Point(187, 298);
+            this.txtAdresa.Location = new System.Drawing.Point(178, 297);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(295, 32);
             this.txtAdresa.TabIndex = 19;
@@ -214,7 +214,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 71);
+            this.label4.Location = new System.Drawing.Point(24, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 24);
             this.label4.TabIndex = 11;
@@ -223,7 +223,7 @@
             // txtJMBG
             // 
             this.txtJMBG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtJMBG.Location = new System.Drawing.Point(187, 177);
+            this.txtJMBG.Location = new System.Drawing.Point(178, 176);
             this.txtJMBG.MaxLength = 13;
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(295, 32);
@@ -234,7 +234,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 130);
+            this.label5.Location = new System.Drawing.Point(24, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 24);
             this.label5.TabIndex = 12;
@@ -243,7 +243,7 @@
             // txtPrezime
             // 
             this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrezime.Location = new System.Drawing.Point(187, 122);
+            this.txtPrezime.Location = new System.Drawing.Point(178, 121);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(295, 32);
             this.txtPrezime.TabIndex = 17;
@@ -253,7 +253,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 185);
+            this.label6.Location = new System.Drawing.Point(24, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 24);
             this.label6.TabIndex = 13;
@@ -262,7 +262,7 @@
             // txtIme
             // 
             this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIme.Location = new System.Drawing.Point(187, 63);
+            this.txtIme.Location = new System.Drawing.Point(178, 62);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(295, 32);
             this.txtIme.TabIndex = 16;
@@ -272,7 +272,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 245);
+            this.label7.Location = new System.Drawing.Point(24, 244);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 24);
             this.label7.TabIndex = 14;
@@ -283,7 +283,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(33, 306);
+            this.label8.Location = new System.Drawing.Point(24, 305);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 24);
             this.label8.TabIndex = 15;
@@ -309,11 +309,12 @@
             this.gbDetaljiOKorisniku.TabIndex = 21;
             this.gbDetaljiOKorisniku.TabStop = false;
             this.gbDetaljiOKorisniku.Text = "Detalji o korisniku";
+            this.gbDetaljiOKorisniku.Visible = false;
             // 
             // txtDatumRodjenja
             // 
             this.txtDatumRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDatumRodjenja.Location = new System.Drawing.Point(187, 237);
+            this.txtDatumRodjenja.Location = new System.Drawing.Point(178, 236);
             this.txtDatumRodjenja.MaxLength = 13;
             this.txtDatumRodjenja.Name = "txtDatumRodjenja";
             this.txtDatumRodjenja.Size = new System.Drawing.Size(295, 32);

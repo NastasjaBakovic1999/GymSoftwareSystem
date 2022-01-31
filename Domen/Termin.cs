@@ -40,7 +40,7 @@ namespace Domen
         public string WhereCondition => $"TerminId={TerminId}";
 
         [Browsable(false)]
-        public string InsertValues => $"'{Datum:dd'.'MM'.'yyyy}', '{Vreme:hh\\:mm}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
+        public string InsertValues => $"'{Datum:yyyyMMdd}', '{Vreme:hh\\:mm}', {Kapacitet}, {Usluga.UslugaId}, {Sala.SalaId}";
 
         [Browsable(false)]
         public string GeneralCondition => "";

@@ -110,9 +110,23 @@ namespace View.ControllerV
                 return;
             }
 
-            if (uCUnosTermina.termini.Any(ter => ter.Usluga.Naziv == termin.Usluga.Naziv && ter.Sala.BrojSale == termin.Sala.BrojSale && ter.Datum == termin.Datum && ter.Vreme == ter.Vreme))
+            if (Communication.Instance.UcitajTermine()
+         .Any(ter => ter.Datum==termin.Datum && ter.Vreme==termin.Vreme && ter.Sala == termin.Sala))
+            {
+                MessageBox.Show("Sistem ne može da unese termin jer se u bazi već nalazi termin koji se u odabranoj sali odvija istog datuma i vremena!");
+                return;
+            }
+
+            if (uCUnosTermina.termini.Any(ter => ter.Usluga.Naziv == termin.Usluga.Naziv && ter.Sala.BrojSale == termin.Sala.BrojSale && ter.Datum == termin.Datum && ter.Vreme == termin.Vreme))
             {
                 MessageBox.Show("Sistem ne može da unese termin jer se on već nalazi u listi termina za čuvanje!");
+                return;
+            }
+
+
+            if (uCUnosTermina.termini.Any(ter => ter.Datum == termin.Datum && ter.Vreme == termin.Vreme && ter.Sala == termin.Sala))
+            {
+                MessageBox.Show("Sistem ne može da unese termin jer se u listi već nalazi termin koji se u odabarnoj sali odvija istog datuma i vremena!");
                 return;
             }
 

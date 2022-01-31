@@ -65,7 +65,7 @@ namespace View.ControllerV
 
             if (uCUnosRezervacija.rezervacije.Any(rez => rez.Termin.TerminId == rezervacija.Termin.TerminId && rez.Korisnik.KorisnikId == rezervacija.Korisnik.KorisnikId))
             {
-                MessageBox.Show("Sistem ne može da unese rzeervaciju jer se ona već nalazi u listi rezervacija za čuvanje!");
+                MessageBox.Show("Sistem ne može da unese rezervaciju jer se ona već nalazi u listi rezervacija za čuvanje!");
                 return;
             }
 
@@ -108,7 +108,7 @@ namespace View.ControllerV
             MessageBox.Show("Rezervacija je obrisana!");
         }
 
-        internal void SacuvajRezervacije(DataGridView dgvRezervacije, UCUnosRezervacija uCUnosRezervacija)
+        internal void SacuvajRezervacije(DataGridView dgvRezervacije, UCUnosRezervacija uCUnosRezervacija, ComboBox cmbKorisnici, ComboBox cmbTermini)
         {
             if (uCUnosRezervacija.rezervacije == null | uCUnosRezervacija.rezervacije.Count == 0)
             {
@@ -122,8 +122,10 @@ namespace View.ControllerV
                 MessageBox.Show("Nove rezervacije su uspešno sačuvane!");
                 uCUnosRezervacija.rezervacije.Clear();
                 dgvRezervacije.DataSource = null;
-
-
+                cmbTermini.SelectedIndex = -1;
+                cmbKorisnici.SelectedIndex = -1;
+                cmbTermini.Text = "Odaberi termin";
+                cmbKorisnici.Text = "Odaberi korisnika";
             }
             catch (SystemOperationException)
             {

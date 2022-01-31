@@ -58,5 +58,9 @@ namespace Server
             txtStatus.BackColor = Color.Coral;
         }
 
+        private void FrmServer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            s.Stop();
+        }
     }
 }

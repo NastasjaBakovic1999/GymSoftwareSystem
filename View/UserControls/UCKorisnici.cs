@@ -47,6 +47,7 @@ namespace View.UserControls
 
         private void btnPrikaziDetalje_Click(object sender, EventArgs e)
         {
+            gbDetaljiOKorisniku.Visible = true;
             korisniciController.UcitajKorisnika(dgvKorisnici, txtIme, txtPrezime, txtAdresa, txtJMBG, txtDatumRodjenja);
         }
 

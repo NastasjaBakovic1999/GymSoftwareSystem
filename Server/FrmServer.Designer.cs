@@ -121,6 +121,7 @@
             this.Name = "FrmServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmServer_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

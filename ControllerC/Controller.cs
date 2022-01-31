@@ -88,7 +88,7 @@ namespace ControllerC
         {
             UnesiRezervacijeSO so = new UnesiRezervacijeSO
             {
-                rezervacije = rezervacije
+                Rezervacije = rezervacije
             };
             so.ExecuteTemplate(new Rezervacija());
         }

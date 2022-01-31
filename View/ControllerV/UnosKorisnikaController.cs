@@ -27,9 +27,21 @@ namespace View.ControllerV
                 return;
             }
 
-            if (!UserControlHelpers.JMBGValidation(txtJMBG))
+            if (!UserControlHelpers.JMBGLengthValidation(txtJMBG))
             {
-                MessageBox.Show("Uneti JMBG nije validan!");
+                MessageBox.Show("Uneti JMBG nije validan! JMBG mora da sadrži 13 cifara");
+                return;
+            }
+
+            if (!UserControlHelpers.JMBGNumberValidation(txtJMBG))
+            {
+                MessageBox.Show("Uneti JMBG nije validan! JMBG može da sadrži samo brojeve!");
+                return;
+            }
+
+            if (!UserControlHelpers.BirthayDateValidation(dtpDatumRodjenja))
+            {
+                MessageBox.Show("Ne možete uneti datum u budućnosti!");
                 return;
             }
 

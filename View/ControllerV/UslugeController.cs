@@ -111,7 +111,7 @@ namespace View.ControllerV
                    Trener = (Trener)cmbTrener.SelectedItem
                 };
 
-                if (Communication.Instance.UcitajUsluge().Any(usl => usl.Naziv == usluga.Naziv))
+                if (Communication.Instance.UcitajUsluge().Any(usl => usl.Naziv.ToLower() == usluga.Naziv.ToLower()))
                 {
                     MessageBox.Show("Sistem ne može da sačuva uslugu jer se ona već nalazi u bazi podataka.");
                     return;

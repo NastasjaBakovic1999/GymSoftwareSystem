@@ -30,7 +30,7 @@ namespace View
         {
             pnlMain.Controls.Clear();
             pnlMain.BackgroundImage = null;
-            userControl.Parent = pnlMain; // PROBATI STA SE DESI AKO STAVIMO pnlMain.Controls.Add(userControl);
+            pnlMain.Controls.Add(userControl);
             userControl.Dock = DockStyle.Fill;
         }
 

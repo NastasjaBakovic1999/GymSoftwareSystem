@@ -9,10 +9,10 @@ namespace SystemOperations.AdminSO
 {
     public class UnesiRezervacijeSO : SystemOperationBase
     {
-        public List<Rezervacija> rezervacije { get; set; }
+        public List<Rezervacija> Rezervacije { get; set; }
         protected override void ExecuteOperation(IEntity entity)
         {
-            foreach (Rezervacija r in rezervacije)
+            foreach (Rezervacija r in Rezervacije)
             {
                 repository.Save(r);
             }

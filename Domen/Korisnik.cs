@@ -40,7 +40,7 @@ namespace Domen
         public string WhereCondition => $"KorisnikId={KorisnikId}";
 
         [Browsable(false)]
-        public string InsertValues => $"'{JMBG}','{Ime}', '{Prezime}', '{DatumRodjenja}', '{Adresa}'";
+        public string InsertValues => $"'{JMBG}','{Ime}', '{Prezime}', '{DatumRodjenja:yyyyMMdd}', '{Adresa}'";
 
         [Browsable(false)]
         public string Uslov;

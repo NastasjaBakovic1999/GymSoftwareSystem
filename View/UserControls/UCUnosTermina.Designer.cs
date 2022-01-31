@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbUnosKorisnika = new System.Windows.Forms.GroupBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(320, 32);
             this.dtpDatum.TabIndex = 33;
-            this.dtpDatum.Value = new System.DateTime(2022, 1, 4, 0, 0, 0, 0);
+            this.dtpDatum.Value = new System.DateTime(2022, 1, 25, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -156,8 +156,8 @@
             this.dgvTermini.Location = new System.Drawing.Point(50, 257);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvTermini.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvTermini.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTermini.RowTemplate.Height = 24;
             this.dgvTermini.Size = new System.Drawing.Size(925, 169);
             this.dgvTermini.TabIndex = 11;
